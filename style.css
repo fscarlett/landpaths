@@ -1,0 +1,100 @@
+/**
+Theme Name: Landpaths Astra Child
+Author: Flight LLC
+Author URI: http://wpastra.com/about/
+Description: Custom child theme for Astra theme created by Flight LLC. Do not change this theme or functionality will break.
+https://flight.io
+www.landpaths.org
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: landpaths-astra-child
+Template: astra
+*/
+
+h1, .h1 {
+	font-size: 3.1rem;
+}
+
+
+h2, .h2 {
+	color: #CF6D34;
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+
+h3, .h3 {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+h4, .h4 {
+	color: #CF6D34;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+
+
+
+section.lp-section {
+	/*margin-top: 2rem;*/
+	/*margin-bottom: 2rem;*/
+	padding-top: 3.5rem;
+	padding-bottom: 3.5rem;
+}
+
+section.lp-bleed-section {
+	height: 50vw;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+
+.lp-img-wrapper {
+	margin-bottom: 30px;
+}
+
+.lp-illustration {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-end;
+	height: 100px;
+}
+
+.lp-illustration img{
+	width: 24%;
+	position: relative;
+	right: -150px;
+}
+
+.lp-button {
+	font-weight: bold;
+}
+
+@media(max-width: 1000px) {
+.lp-illustration img{
+	position: initial;
+	}
+}
+
+@media(max-width: 700px) {
+	.lp-phone-hide {
+		display: none;
+	}
+}
