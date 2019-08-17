@@ -211,14 +211,15 @@ get_header(); ?>
 			</div>
 		</section>
 					
+					<?php get_template_part( 'template-parts/newsletter-signup' ); ?>
 
 
 
-		<?php astra_primary_content_top(); ?>
+		<?php // astra_primary_content_top(); ?>
 
 		<?php // astra_content_page_loop(); ?>
 
-		<?php astra_primary_content_bottom(); ?>
+		<?php //  astra_primary_content_bottom(); ?>
 
 	</div><!-- #primary -->
 

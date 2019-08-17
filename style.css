@@ -19,6 +19,33 @@ light green #A6AB69
 
 */
 
+/* ----------  Astra overrides -------------  */
+
+.ast-small-footer-wrap {
+    text-align: left;
+    font-weight: bold;
+}
+
+@media (min-width: 769px) {
+	.ast-footer-overlay {
+	    padding-top: 10px;
+	    padding-bottom: 60px;
+	}
+}
+
+@media (min-width: 769px) {
+	.footer-adv-layout-7 .footer-adv-widget-1 {
+	    text-align: left;
+	}
+}
+
+.footer-adv-overlay {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* -----------  Landpaths ------------------ */
+
 h1, .h1 {
 	color: #222;
 	font-size: 3.1rem;
@@ -48,6 +75,14 @@ h4, .h4 {
 	font-weight: bold;
 	margin-bottom: 20px;
 	text-transform: none;
+}
+
+.footer-slogan {
+	font-family: 'Roboto Slab', serif;
+	font-size: 3.1rem;
+	color: #fff;
+	line-height: 1.3;
+	font-weight: bold;
 }
 
 .copy-half-width {
@@ -179,6 +214,8 @@ section.lp-bleed-section {
 	float: left;
 	padding: 5px;
 }
+
+
 
 @media(max-width: 1000px) {
 .lp-illustration img{
