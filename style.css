@@ -12,23 +12,34 @@ Text Domain: landpaths-astra-child
 Template: astra
 */
 
+/*
+green #4D7536
+orange  #CF6D34 
+light green #A6AB69
+
+*/
+
 h1, .h1 {
+	color: #222;
 	font-size: 3.1rem;
+	text-transform: none;
 }
 
 
 h2, .h2 {
 	color: #CF6D34;
 	font-size: 2.5rem;
-	font-weight: bold;
+	font-weight: normal;
 	text-transform: uppercase;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 
 h3, .h3 {
+	color: #222;
 	font-size: 2rem;
 	font-weight: bold;
 	margin-bottom: 30px;
+	text-transform: none;
 }
 
 h4, .h4 {
@@ -36,9 +47,18 @@ h4, .h4 {
 	font-size: 1.5rem;
 	font-weight: bold;
 	margin-bottom: 20px;
+	text-transform: none;
 }
 
+.copy-half-width {
+	max-width: 500px;
+	margin-bottom: 50px;
+}
 
+.lp-white-copy-card {
+	background-color: #fff;
+	padding: 20px 15px;
+}
 
 
 section.lp-section {
@@ -55,10 +75,46 @@ section.lp-bleed-section {
 	background-repeat: no-repeat;
 }
 
+.lp-bg-grey {
+	background-color: #f3f6f9;
+}
+
+.thingy {
+	height: 80px;	
+	border-top: 10px solid #A6AB69;
+	width: 80px;
+}
+
+/*.thingy::after {
+	content: "- ";
+    font-size: 20rem;
+    line-height: 0px;
+    display: inline-block;
+    position: relative;
+    top: -37px;
+    left: -7px;
+    color: green; 
+}*/
+
 
 
 .lp-img-wrapper {
 	margin-bottom: 30px;
+}
+
+.lp-3up-img-wrapper {
+	height: 250px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.lp-4up-img-wrapper {
+	height: 400px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: 25px;
 }
 
 .lp-illustration {
@@ -74,7 +130,7 @@ section.lp-bleed-section {
 	flex-direction: row;
 	justify-content: flex-end;
 	align-items: flex-end;
-	height: 100px;
+	height: 1px;
 }
 
 .lp-illustration img{
@@ -83,8 +139,45 @@ section.lp-bleed-section {
 	right: -150px;
 }
 
+.lp-illo-small img {
+	width: 19%;
+	position: relative;
+	right: -60px;	
+  bottom: -20px;
+}
+
 .lp-button {
 	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.lp-link {
+	color: #4D7536;
+}
+
+.lp-quad-1 {
+	width: 40%;
+	overflow: hidden;
+	float: left;
+	padding: 5px;
+}
+.lp-quad-2 {
+	width: 60%;
+	overflow: hidden;
+	float: left;
+	padding: 5px;
+}
+.lp-quad-3 {
+	width: 40%;
+	overflow: hidden;
+	float: left;
+	padding: 5px;
+}
+.lp-quad-4 {
+	width: 60%;
+	overflow: hidden;
+	float: left;
+	padding: 5px;
 }
 
 @media(max-width: 1000px) {
