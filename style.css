@@ -114,6 +114,10 @@ section.lp-bleed-section {
 	background-color: #f3f6f9;
 }
 
+.lp-border-right {
+	border-right: 5px solid #ccc !important;
+}
+
 .thingy {
 	height: 80px;	
 	border-top: 10px solid #A6AB69;
@@ -213,6 +217,11 @@ section.lp-bleed-section {
 	overflow: hidden;
 	float: left;
 	padding: 5px;
+}
+
+body.page-template-page-t4 .entry-header {
+	margin-top: 20px;
+	padding-left: 0;
 }
 
 

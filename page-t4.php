@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home
+ * Template Name: T4 
  *
  * @package Astra
  * @since 1.0.0
@@ -8,13 +8,72 @@
 
 get_header(); ?>
 
-<?php if ( astra_page_layout() == 'left-sidebar' ) : ?>
-
-	<?php // get_sidebar(); ?>
-
-<?php endif ?>
-
 	<div id="primary" <?php astra_primary_class(); ?>>
+
+		<section class="lp-bleed-section" style="background-image: url(<?php the_field('hero_image'); ?>)"></section>
+
+		<section class="lp_block7_content_quote lp-section ast-container">
+			<p class="h4"><?php the_field('subtitle'); ?></p>
+
+			<div class="ast-row">
+				<div class="ast-col-lg-9 ast-col-md-8 ast-col-sm-12 ast-col-xs-12 lp-border-right">
+			
+					<?php // astra_primary_content_top(); ?>
+
+					<?php astra_content_page_loop(); ?>
+
+					<?php // astra_primary_content_bottom(); ?>
+
+				</div>
+				<div class="ast-col-lg-3 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
+					<p class="h4"><?php the_field('quote_author'); ?></p>
+					<p>" <?php the_field('quote_text'); ?> "</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="activity-section lp-section ast-container">
+			<h2><?php the_field('activity_heading'); ?></h2>
+			<div class="thingy"></div>
+
+			<?php if( have_rows('activity') ): ?>
+
+			<div class="activity-wrapper">
+
+				<?php while( have_rows('activity') ): the_row(); 
+
+					$image = get_sub_field('image');
+					$title = get_sub_field('title');
+					$description = get_sub_field('description');
+					$button_text = get_sub_field('button_text');
+					$button_link = get_sub_field('button_link');
+
+				?>
+
+					<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
+
+							<img src="<?php echo $image; ?>" alt="<?php echo $image['alt'] ?>" />
+
+					    <h3 class="h4"><?php echo $title; ?></h3>
+
+					    <p><?php echo $description; ?></p>
+
+					    <a href="<?php echo $button_link; ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php echo $button_text; ?></button></a>
+
+					</div>
+
+				<?php endwhile; ?>
+
+				</div>
+
+			<?php endif; ?>
+
+
+
+
+		</section>
+
+
 
 		<section class="lp_block1_cta_1img_r lp-section ast-container"> 
 			<div class="ast-row">
@@ -35,7 +94,6 @@ get_header(); ?>
 			</div>
 		</section>
 
-		<section class="lp-bleed-section" style="background-image: url(<?php the_field('big_image_1'); ?>)"></section>
 
 		<section class="lp_block2_cta_2up-illustration lp-section ast-container">
 			<h2><?php the_field('block_2_heading'); ?></h2>
@@ -220,11 +278,7 @@ get_header(); ?>
 
 
 
-		<?php // astra_primary_content_top(); ?>
 
-		<?php // astra_content_page_loop(); ?>
-
-		<?php //  astra_primary_content_bottom(); ?>
 
 	</div><!-- #primary -->
 
