@@ -44,6 +44,10 @@ light green #A6AB69
     padding-bottom: 20px;
 }
 
+.entry-content {
+	padding-bottom: 50px;
+}
+
 /* -----------  Landpaths ------------------ */
 
 h1, .h1 {
@@ -170,6 +174,8 @@ section.lp-bleed-section {
 	justify-content: flex-end;
 	align-items: flex-end;
 	height: 1px;
+	position: relative;
+	z-index: -1;
 }
 
 .lp-illustration img{
@@ -219,9 +225,58 @@ section.lp-bleed-section {
 	padding: 5px;
 }
 
+/* ---------------- T4 ------------------- */
+
 body.page-template-page-t4 .entry-header {
 	margin-top: 20px;
 	padding-left: 0;
+}
+
+.illo-quote {
+	max-height: 400px;
+}
+
+section.lp-downloads-section {
+	padding-bottom: 0;
+}
+
+.downloads-wrapper {
+	padding: 20px 0;
+}
+
+.lp-download {
+	margin-top: 20px;
+}
+
+.lp-download a {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px 25px;
+	background: #eee;
+	color: #4D7536;
+	border-radius: 5px;
+}
+
+.lp-blog-img-wrapper {
+	height: 250px;
+	background: #fff;
+	overflow: hidden;
+}
+.lp-blog-img-wrapper img {
+	width: 100%;
+}
+.lp-blog-copy-card {
+	background-color: #fff;
+	padding: 20px 15px;
+	min-height: 150px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
 }
 
 
@@ -230,10 +285,20 @@ body.page-template-page-t4 .entry-header {
 .lp-illustration img{
 	position: initial;
 	}
+
+.lp-blog-img-wrapper {
+	height: 170px;
 }
 
 @media(max-width: 700px) {
 	.lp-phone-hide {
 		display: none;
+	}
+	.lp-blog-img-wrapper {
+		height: auto;
+		margin-top: 10px;
+	}
+	.lp-blog-copy-card {
+		height: auto;
 	}
 }

@@ -10,7 +10,19 @@ get_header(); ?>
 
 	<div id="primary" <?php astra_primary_class(); ?>>
 
-		<section class="lp-bleed-section" style="background-image: url(<?php the_field('hero_image'); ?>)"></section>
+		<?php 
+
+				$lp_hero = get_field('hero_image');
+
+				if (!$lp_hero):
+
+					$lp_hero = site_url() . '/wp-content/uploads/2019/07/CSP-Bohemia-03.jpg';
+
+				endif;
+
+		 ?>
+
+		<section class="lp-bleed-section" style="background-image: url(<?php echo $lp_hero; ?>)"></section>
 
 		<section class="lp_block7_content_quote lp-section ast-container">
 			<p class="h4"><?php the_field('subtitle'); ?></p>
@@ -26,17 +38,35 @@ get_header(); ?>
 
 				</div>
 				<div class="ast-col-lg-3 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
-					<p class="h4"><?php the_field('quote_author'); ?></p>
-					<p>" <?php the_field('quote_text'); ?> "</p>
+					
+
+					<?php 
+
+					$lp_quote = get_field('quote_text');
+
+					if($lp_quote) {  ?>
+
+						<p class="h4"><?php the_field('quote_author'); ?></p>
+						<p>" <?php the_field('quote_text'); ?> "</p>
+
+					<?php } else { ?>
+
+					<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/LP_illo_heron.jpg" class="illo-quote lp-phone-hide" alt="">
+
+						<?php
+					}
+
+
+					 ?>
 				</div>
 			</div>
 		</section>
 
 		<section class="activity-section lp-section ast-container">
 			<h2><?php the_field('activity_heading'); ?></h2>
-			<div class="thingy"></div>
 
 			<?php if( have_rows('activity') ): ?>
+			<div class="thingy"></div>
 
 			<div class="activity-wrapper">
 
@@ -67,225 +97,123 @@ get_header(); ?>
 				</div>
 
 			<?php endif; ?>
-
-
-
-
 		</section>
 
+		<?php if ( have_rows('downloads') ): ?>
 
+			<section class="lp-downloads-section lp-section ast-container">
+				<div class="ast-row">
+					<div class="ast-col-lg-8 ast-col-md-8 ast-col-sm-10 ast-col-xs-12">
 
-		<section class="lp_block1_cta_1img_r lp-section ast-container"> 
-			<div class="ast-row">
-				<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
-					<p class="h4"><?php the_field('block_name') ?></p>
-					<h1><?php the_field('main_heading') ?></h1> 
+						<p class="h4">Links and Downloads</p>
 
-					<p><?php the_field('paragraph_1') ?></p>
-					<p><?php the_field('paragraph_2') ?></p>
-					<a href="<?php site_url(); ?>/get-kids-outside/" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php the_field('block_1_button_text'); ?></button></a>
+						<h2 class="h1"><?php the_field('downloads_heading'); ?></h2>
+						<p><?php the_field('downloads_subheading'); ?></p>
 
-				</div>
-				<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-img-wrapper">
-						<img src="<?php the_field('block_1_image'); ?>" alt="">
-					</div>
-				</div>
-			</div>
-		</section>
+						<div class="downloads-wrapper">
+							<?php while( have_rows('downloads') ): the_row();
 
+								$file = get_sub_field('file');							
+								$label = get_sub_field('label');							
+														
+							?>
 
-		<section class="lp_block2_cta_2up-illustration lp-section ast-container">
-			<h2><?php the_field('block_2_heading'); ?></h2>
-			<div class="thingy"></div>
+								<p class="lp-download"><a href="<?php echo $file; ?>"><?php echo $label; ?></a></p>
+								<p><?php the_sub_field('description'); ?></p>
+								<p></p>
 
-			<?php 
-				$b2_col_1 = get_field('block_2_column_1');
-				$b2_col_2 = get_field('block_2_column_2');
-			 ?>
+							<?php endwhile; ?>
 
-			<div class="ast-row">
-				<div class="ast-col-lg-5 ast-col-md-5 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-img-wrapper">
-						<img src="<?php echo $b2_col_1['image']; ?>" alt="<?php echo $b2_col_1['image']['alt']; ?>">
-					</div>
-					<h3 class="h4"><?php echo $b2_col_1['column_heading']; ?></h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quos nihil expedita, aliquam harum dolor repudiandae nobis reprehenderit molestiae deleniti cum id dolorem aliquid esse magni pariatur hic asperiores, saepe. Aliquid minus magnam maiores in consequatur, veritatis qui incidunt tempore harum officia excepturi odio impedit provident commodi, aspernatur sint sunt. </p>
-					<a href="<?php site_url(); ?>/get-kids-outside/" class="ast-custom-button-link"><button class="ast-custom-button lp-button">Learn More</button></a>
-
-				</div>
-				<div class="ast-col-lg-5 ast-col-md-5 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-img-wrapper">
-						<img src="<?php echo $b2_col_2['image']; ?>" alt="">
-					</div>
-					<h3 class="h4">Spring Break Nature Camp</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione odio atque in et velit maxime voluptates numquam iusto itaque, reiciendis perspiciatis, commodi asperiores dolor debitis ut facilis tempora quisquam. Vero at quas eligendi, consectetur hic ex! Dicta, reiciendis, laboriosam. Rerum, a omnis quis voluptatum maxime sit reprehenderit sequi, repellat! Corporis, amet numquam quis voluptas alias, debitis unde similique minima beatae?</p>
-					<a href="<?php site_url(); ?>/get-kids-outside/" class="ast-custom-button-link"><button class="ast-custom-button lp-button">Learn More</button></a>
-
-				</div>
-				
-			</div>
-
-			<div class=" lp-phone-hide lp-illustration">
-					<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/LP_illo_ceanothus.jpg" alt="">
-			</div>
-		</section>
-
-		<section class="lp-bleed-section" style="background-image: url(<?php the_field('big_image_2'); ?>)"></section>
-
-		<section class="lp_block3_cta_4img_r lp-section ast-container">
-			<div class="ast-row">
-				<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
-					<p class="h4">Volunteer</p>
-					<h2 class="h1">Our People-Powered Movement!</h2>
-
-					<p>Our impact is made possible by volunteers like you, with a passion for growing community with nature. From clearing invasive species at one of our preserves to singing songs with youth at our summer nature camp, volunteers lie at the heart of LandPaths.</p>
-					<a href="<?php site_url(); ?>/volunteer/" class="ast-custom-button-link"><button class="ast-custom-button lp-button">Volunteer</button></a>
-
-				</div>
-
-				<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
-					<div class="ast-row">
-						<div class="lp-quad-1">
-							<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt="">
-						</div>
-						<div class="lp-quad-2">
-							<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt="">
-						</div>
-					<!-- </div>
-					<div class="ast-row"> -->
-						<div class="lp-quad-3">
-							<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt="">
-						</div>
-						<div class="lp-quad-4">
-							<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt="">
 						</div>
 					</div>
 				</div>
-
-			</div>
-		</section>
-
-		<section class="lp_block4_cta_1up_illustration lp-section ast-container">
-			<div class="ast-row">
-				<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-img-wrapper">
-						<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt="">
-					</div>
+				<div class=" lp-phone-hide lp-illustration lp-illo-small">
+						<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/LP_illo_poppy.jpg" alt="">
 				</div>
-				<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
-					<p class="h4">Go Outside</p>
-					<h2 class="h1">Explore Local Nature</h2>
+			</section>
 
-					<p>Our impact is made possible by volunteers like you, with a passion for growing community with nature. From clearing invasive species at one of our preserves to singing songs with youth at our summer nature camp, volunteers lie at the heart of LandPaths.</p>
-					<a href="<?php site_url(); ?>/explore/" class="ast-custom-button-link"><button class="ast-custom-button lp-button">Explore</button></a>
-				</div>	
-			</div>
+		<?php endif; ?>
 
-			<div class=" lp-phone-hide lp-illustration lp-illo-small">
-					<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/LP_illo_heron.jpg" alt="">
-			</div>
 
-		</section>
-
-		<section class="lp_block5_cta_4up lp-section ast-container">
-			<h2>Featured Outings</h2>
-			<div class="thingy"></div>
-
-			<div class="ast-row">
-
-				<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-4up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-						<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
-					</div>
-					<h3 class="h4">Bohemia Ecological Preserve</h3>
-					<p>Bohemia Ecological Preserve — 1,000 magnificent acres in the western hills of Sonoma County near Occidental — boasts stunningly diverse habitats, three creeks, and an iconic 25-foot waterfall.</p>
-					<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
-				</div>
-
-				<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-4up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-						<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
-					</div>
-					<h3 class="h4">Bohemia Ecological Preserve</h3>
-					<p>Bohemia Ecological Preserve — 1,000 magnificent acres in the western hills of Sonoma County near Occidental — boasts stunningly diverse habitats, three creeks, and an iconic 25-foot waterfall.</p>
-					<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
-				</div>
-
-				<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-4up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-						<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
-					</div>
-					<h3 class="h4">Bohemia Ecological Preserve</h3>
-					<p>Bohemia Ecological Preserve — 1,000 magnificent acres in the western hills of Sonoma County near Occidental — boasts stunningly diverse habitats, three creeks, and an iconic 25-foot waterfall.</p>
-					<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
-				</div>
-
-				<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-4up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-						<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
-					</div>
-					<h3 class="h4">Bohemia Ecological Preserve</h3>
-					<p>Bohemia Ecological Preserve — 1,000 magnificent acres in the western hills of Sonoma County near Occidental — boasts stunningly diverse habitats, three creeks, and an iconic 25-foot waterfall.</p>
-					<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
-				</div>
-				
-			</div>
-		</section>
-
-		<section class="lp-bleed-section" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/07/CSP-Bohemia-03.jpg)"></section>
-
-		<section class="lp_block6_cta_3up lp-section lp-bg-grey ">
+		<!-- blog section -->
+		<section class="lp_block6_cta_3up blog-section lp-section lp-bg-grey ">
 			<div class="ast-container">
 				<p class="h4">Stories + News</p>
-				<h2 class="h1">Nature Journal</h2>
-				<p class="copy-half-width">Our impact is made possible by volunteers like you, with a passion for growing community with nature.</p>
+				<h2 class="h1"><?php the_field('blog_section_heading'); ?></h2>
+				<p class="copy-half-width"><?php the_field('blog_section_subheading') ?></p>
 				<div class="ast-row">
-					<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
-						<div class="lp-3up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-							<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
-						</div>
-						<div class="lp-white-copy-card">
-							<h3 class="h4">Spring Break Nature Camp</h3> 
-							<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
-						</div>
-					</div>
-					<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
-						<div class="lp-3up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-							<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
-						</div>
-						<div class="lp-white-copy-card">
-							<h3 class="h4">Spring Break Nature Camp</h3>
-							<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
-						</div>
-					</div>
-					<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
-						<div class="lp-3up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-							<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
-						</div>
-						<div class="lp-white-copy-card">
-							<h3 class="h4">Spring Break Nature Camp</h3>
-							<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
-						</div>
-					</div>
+
+					<?php 
+
+					$lp_tag = get_field('blog_tag');
+					$lp_tag_slug = $lp_tag->slug;
+
+						$lp_blog_args = array(
+							'tag' 						=> $lp_tag_slug,
+			        'order'           => 'DESC',
+			        'posts_per_page'  => '3',
+			        );
+
+			      $lp_blog = new WP_Query( $lp_blog_args );
+
+
+			      if ( $lp_blog->have_posts() ) {
+
+			        while ( $lp_blog->have_posts() ) {
+
+			          $lp_blog->the_post();
+
+			          ?>
+
+			          <div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
+									<div class="lp-blog-img-wrapper">
+										<?php the_post_thumbnail('medium'); ?>
+										<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
+									</div>
+									<div class="lp-blog-copy-card">
+										<h3 class="h4"><?php the_title(); ?></h3> 
+										<a href="<?php the_permalink(); ?>" class="lp-link ast-custom-button-link">Learn More</a>
+									</div>
+								</div>
+
+			        <?php
+			        } // endwhile 
+
+			      } else {
+			        echo '<p>No posts have been found.</p>';
+			      }; 
+
+			      wp_reset_postdata();
+
+			    ?> 
 
 
 				</div> 
 			</div>
-		</section>
+		</section>  <!-- blog -->
+
+		<!-- <section class="lp-bleed-section" style="background-image: url(<?php the_field('big_image_2'); ?>)"></section> -->
+
+		<?php 
+
+				$lp_big2 = get_field('big_image_2');
+
+				if (!$lp_big2):
+
+					$lp_big2 = site_url() . '/wp-content/uploads/2019/07/CSP-Bohemia-03.jpg';
+
+				endif;
+
+		 ?>
+
+		<section class="lp-bleed-section" style="background-image: url(<?php echo $lp_big2; ?>)"></section>
+
+
 					
-					<?php get_template_part( 'template-parts/newsletter-signup' ); ?>  
-
-
+		<?php get_template_part( 'template-parts/newsletter-signup' ); ?>  
 
 
 
 	</div><!-- #primary -->
-
-<?php if ( astra_page_layout() == 'right-sidebar' ) : ?>
-
-	<?php // get_sidebar(); ?>
-
-<?php endif ?>
 
 <?php get_footer(); ?>
