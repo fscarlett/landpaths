@@ -24,7 +24,7 @@ get_header(); ?>
 
 		<section class="lp-bleed-section" style="background-image: url(<?php echo $lp_hero; ?>)"></section>
 
-		<section class="lp_block7_content_quote lp-section ast-container">
+		<section class="lp-section ast-container">
 			<p class="h4"><?php the_field('subtitle'); ?></p>
 
 			<div class="ast-row">
@@ -62,77 +62,85 @@ get_header(); ?>
 			</div>
 		</section>
 
+
+
+		<!-- ======================  QUOTES SECTION ========================= -->
 		<?php if (have_rows('quote')) : ?>
 
-			<section class="lp-quote-section lp-section ast-container">
-				<p class="h4"><?php the_field('quote_section_subheading'); ?></p>
-					
-				<h2><?php the_field('quote_section_heading'); ?></h2>
+			<section class="lp-quote-section lp-section lp-bg-grey">
+				<div class="ast-container">
+					<p class="h4"><?php the_field('quote_section_subheading'); ?></p>
+						
+					<h2 class="h1"><?php the_field('quote_section_heading'); ?></h2>
 
-				<p><?php the_field('quote_section_blurb') ?></p>
+					<h5><?php the_field('quote_section_blurb') ?></h5>
 
-				<div class="quote-wrapper">
+					<div class="quote-wrapper ast-row">
 
-					<?php while( have_rows('quote') ): the_row(); ?>
+						<?php while( have_rows('quote') ): the_row(); ?>
 
-						<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
+							<div class="ast-col-lg-4 ast-col-md-6 ast-col-sm-12 ast-col-xs-12 lp-quote-card">
 
-						    <p class=""><?php the_sub_field('quote_text'); ?></p>
+							    <p class=""><?php the_sub_field('quote_text'); ?></p>
 
-						    <p class=""><?php the_sub_field('quote_author'); ?></p>
+							    <p class="quote-author"><?php the_sub_field('quote_author'); ?></p>
 
-						</div>
+							</div>
 
-					<?php endwhile; ?>
+						<?php endwhile; ?>
+
+					</div>
 
 				</div>
-
-
 
 			</section>
 
 		<?php endif; ?>
+		<!-- ============= End quotes section ============== -->
 
 
+		<!-- ============= ACTIVITY section ============== -->
 
-
-		<section class="activity-section lp-section ast-container">
-			<h2><?php the_field('activity_heading'); ?></h2>
-
+		
 			<?php if( have_rows('activity') ): ?>
-			<div class="thingy"></div>
 
-			<div class="activity-wrapper">
+				<section class="activity-section lp-section ast-container">
+					<h2><?php the_field('activity_heading'); ?></h2>
 
-				<?php while( have_rows('activity') ): the_row(); 
+					<div class="thingy"></div>
 
-					$image = get_sub_field('image');
-					$title = get_sub_field('title');
-					$description = get_sub_field('description');
-					$button_text = get_sub_field('button_text');
-					$button_link = get_sub_field('button_link');
+					<div class="activity-wrapper">
 
-				?>
+						<?php while( have_rows('activity') ): the_row(); 
 
-					<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
+							$image = get_sub_field('image');
+							$title = get_sub_field('title');
+							$description = get_sub_field('description');
+							$button_text = get_sub_field('button_text');
+							$button_link = get_sub_field('button_link');
 
-							<img src="<?php echo $image; ?>" alt="<?php echo $image['alt'] ?>" />
+						?>
 
-					    <h3 class="h4"><?php echo $title; ?></h3>
+							<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
 
-					    <p><?php echo $description; ?></p>
+									<img src="<?php echo $image; ?>" alt="<?php echo $image['alt'] ?>" />
 
-					    <a href="<?php echo $button_link; ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php echo $button_text; ?></button></a>
+							    <h3 class="h4"><?php echo $title; ?></h3>
 
-					</div>
+							    <p><?php echo $description; ?></p>
 
-				<?php endwhile; ?>
+							    <a href="<?php echo $button_link; ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php echo $button_text; ?></button></a>
 
-				</div>
+							</div>
+
+						<?php endwhile; ?>
+
+						</div>
+				</section>
 
 			<?php endif; ?>
-		</section>
 		
+		<!-- ============= End activity section ============== -->
 
 
 		<?php 

@@ -225,6 +225,28 @@ section.lp-bleed-section {
 	padding: 5px;
 }
 
+/* ----------------- T2 ------------------- */
+
+body.page-template-page-t2 .entry-header {
+	margin-top: 20px;
+	padding-left: 0;
+}
+
+.lp-quote-section .quote-wrapper {
+	margin-top: 40px;
+}
+
+.lp-quote-section .lp-quote-card {
+	padding: 35px 25px;
+	margin-right: 25px;
+	background: #fff;
+	min-height: 350px;
+}
+
+.quote-author {
+	font-weight: bold;
+}
+
 /* ---------------- T4 ------------------- */
 
 body.page-template-page-t4 .entry-header {
