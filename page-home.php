@@ -78,33 +78,26 @@ get_header(); ?>
 		<section class="lp_block3_cta_4img_r lp-section ast-container">
 			<div class="ast-row">
 				<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
-					<p class="h4">Volunteer</p>
-					<h2 class="h1">Our People-Powered Movement!</h2>
-
-					<p>Our impact is made possible by volunteers like you, with a passion for growing community with nature. From clearing invasive species at one of our preserves to singing songs with youth at our summer nature camp, volunteers lie at the heart of LandPaths.</p>
-					<a href="<?php site_url(); ?>/volunteer/" class="ast-custom-button-link"><button class="ast-custom-button lp-button">Volunteer</button></a>
-
+					<p class="h4"><?php the_field('block_3_subheading'); ?></p>
+					<h2 class="h1"><?php the_field('block_3_heading'); ?></h2>
+					<p><?php the_field('block_3_copy'); ?></p>
+					<a href="<?php the_field('block_3_button_link'); ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php the_field('block_3_button_text') ?></button></a>
 				</div>
 
 				<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
-					<div class="ast-row">
-						<div class="lp-quad-1">
-							<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt="">
+					<div class="ast-row lp-quad-wrapper">
+						<div class="lp-quad lp-quad-1" style="background-image: url(<?php the_field('block_3_image_1'); ?>);">
 						</div>
-						<div class="lp-quad-2">
-							<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt="">
+						<div class="lp-quad lp-quad-2" style="background-image: url(<?php the_field('block_3_image_2'); ?>);">
 						</div>
 					<!-- </div>
 					<div class="ast-row"> -->
-						<div class="lp-quad-3">
-							<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt="">
+						<div class="lp-quad lp-quad-3" style="background-image: url(<?php the_field('block_3_image_3'); ?>);">
 						</div>
-						<div class="lp-quad-4">
-							<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt="">
+						<div class="lp-quad lp-quad-4" style="background-image: url(<?php the_field('block_3_image_4'); ?>);">
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</section>
 
@@ -112,20 +105,20 @@ get_header(); ?>
 			<div class="ast-row">
 				<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
 					<div class="lp-img-wrapper">
-						<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt="">
+						<img src="<?php the_field('block_4_photo'); ?>" alt="">
 					</div>
 				</div>
 				<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
-					<p class="h4">Go Outside</p>
-					<h2 class="h1">Explore Local Nature</h2>
+					<p class="h4"><?php the_field('block_4_subheading'); ?></p>
+					<h2 class="h1"><?php the_field('block_4_heading'); ?></h2>
 
-					<p>Our impact is made possible by volunteers like you, with a passion for growing community with nature. From clearing invasive species at one of our preserves to singing songs with youth at our summer nature camp, volunteers lie at the heart of LandPaths.</p>
-					<a href="<?php site_url(); ?>/explore/" class="ast-custom-button-link"><button class="ast-custom-button lp-button">Explore</button></a>
+					<p><?php the_field('block_4_copy'); ?></p>
+					<a href="<?php the_field('block_4_button_link') ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php the_field('block_4_button_text'); ?></button></a>
 				</div>	
 			</div>
 
 			<div class=" lp-phone-hide lp-illustration lp-illo-small">
-					<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/LP_illo_heron.jpg" alt="">
+					<img src="<?php the_field('block_4_illustration'); ?>" alt="">
 			</div>
 
 		</section>
@@ -137,39 +130,35 @@ get_header(); ?>
 			<div class="ast-row">
 
 				<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-4up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-						<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
+					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_1_image') ?>)">
 					</div>
-					<h3 class="h4">Bohemia Ecological Preserve</h3>
-					<p>Bohemia Ecological Preserve — 1,000 magnificent acres in the western hills of Sonoma County near Occidental — boasts stunningly diverse habitats, three creeks, and an iconic 25-foot waterfall.</p>
-					<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
+					<h3 class="h4"><?php the_field('outing_1_title') ?></h3>
+					<p><?php the_field('outing_1_copy') ?></p>
+					<a href="<?php the_field('outing_1_link') ?>" class="lp-link ast-custom-button-link">Learn More</a>
 				</div>
 
 				<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-4up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-						<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
+					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_2_image') ?>)">
 					</div>
-					<h3 class="h4">Bohemia Ecological Preserve</h3>
-					<p>Bohemia Ecological Preserve — 1,000 magnificent acres in the western hills of Sonoma County near Occidental — boasts stunningly diverse habitats, three creeks, and an iconic 25-foot waterfall.</p>
-					<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
+					<h3 class="h4"><?php the_field('outing_2_title') ?></h3>
+					<p><?php the_field('outing_2_copy') ?></p>
+					<a href="<?php the_field('outing_2_link') ?>" class="lp-link ast-custom-button-link">Learn More</a>
 				</div>
 
 				<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-4up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-						<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
+					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_3_image') ?>)">
 					</div>
-					<h3 class="h4">Bohemia Ecological Preserve</h3>
-					<p>Bohemia Ecological Preserve — 1,000 magnificent acres in the western hills of Sonoma County near Occidental — boasts stunningly diverse habitats, three creeks, and an iconic 25-foot waterfall.</p>
-					<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
+					<h3 class="h4"><?php the_field('outing_3_title') ?></h3>
+					<p><?php the_field('outing_3_copy') ?></p>
+					<a href="<?php the_field('outing_3_link') ?>" class="lp-link ast-custom-button-link">Learn More</a>
 				</div>
 
 				<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-4up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-						<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
+					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_4_image') ?>)">
 					</div>
-					<h3 class="h4">Bohemia Ecological Preserve</h3>
-					<p>Bohemia Ecological Preserve — 1,000 magnificent acres in the western hills of Sonoma County near Occidental — boasts stunningly diverse habitats, three creeks, and an iconic 25-foot waterfall.</p>
-					<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
+					<h3 class="h4"><?php the_field('outing_4_title') ?></h3>
+					<p><?php the_field('outing_4_copy') ?></p>
+					<a href="<?php the_field('outing_4_link') ?>" class="lp-link ast-custom-button-link">Learn More</a>
 				</div>
 				
 			</div>
@@ -177,7 +166,63 @@ get_header(); ?>
 
 		<section class="lp-bleed-section" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/07/CSP-Bohemia-03.jpg)"></section>
 
-		<section class="lp_block6_cta_3up lp-section lp-bg-grey ">
+				<!-- blog section -->
+		<section class="lp_block6_cta_3up blog-section lp-section lp-bg-grey ">
+			<div class="ast-container">
+				<p class="h4">Stories + News</p>
+				<h2 class="h1"><?php the_field('blog_section_heading'); ?></h2>
+				<p class="copy-half-width"><?php the_field('blog_section_subheading') ?></p>
+				<div class="ast-row">
+
+					<?php 
+
+					$lp_tag = get_field('blog_tag');
+					$lp_tag_slug = $lp_tag->slug;
+
+						$lp_blog_args = array(
+							'tag' 						=> $lp_tag_slug,
+			        'order'           => 'DESC',
+			        'posts_per_page'  => '3',
+			        );
+
+			      $lp_blog = new WP_Query( $lp_blog_args );
+
+
+			      if ( $lp_blog->have_posts() ) {
+
+			        while ( $lp_blog->have_posts() ) {
+
+			          $lp_blog->the_post();
+
+			          ?>
+
+			          <div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
+									<div class="lp-blog-img-wrapper">
+										<?php the_post_thumbnail('medium'); ?>
+										<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
+									</div>
+									<div class="lp-blog-copy-card">
+										<h3 class="h4"><?php the_title(); ?></h3> 
+										<a href="<?php the_permalink(); ?>" class="lp-link ast-custom-button-link">Learn More</a>
+									</div>
+								</div>
+
+			        <?php
+			        } // endwhile 
+
+			      } else {
+			        echo '<p>No posts have been found.</p>';
+			      }; 
+
+			      wp_reset_postdata();
+
+			    ?> 
+
+				</div> 
+			</div>
+		</section>  <!-- blog -->
+
+		<!-- <section class="lp_block6_cta_3up lp-section lp-bg-grey ">
 			<div class="ast-container">
 				<p class="h4">Stories + News</p>
 				<h2 class="h1">Nature Journal</h2>
@@ -185,7 +230,6 @@ get_header(); ?>
 				<div class="ast-row">
 					<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
 						<div class="lp-3up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-							<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
 						</div>
 						<div class="lp-white-copy-card">
 							<h3 class="h4">Spring Break Nature Camp</h3> 
@@ -194,7 +238,6 @@ get_header(); ?>
 					</div>
 					<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
 						<div class="lp-3up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-							<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
 						</div>
 						<div class="lp-white-copy-card">
 							<h3 class="h4">Spring Break Nature Camp</h3>
@@ -203,18 +246,15 @@ get_header(); ?>
 					</div>
 					<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
 						<div class="lp-3up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-							<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
 						</div>
 						<div class="lp-white-copy-card">
 							<h3 class="h4">Spring Break Nature Camp</h3>
 							<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
 						</div>
 					</div>
-
-
 				</div> 
 			</div>
-		</section>
+		</section> -->
 					
 					<?php get_template_part( 'template-parts/newsletter-signup' ); ?>  
 

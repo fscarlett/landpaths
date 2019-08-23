@@ -187,12 +187,9 @@ get_header(); ?>
 
 			    ?> 
 
-
 				</div> 
 			</div>
 		</section>  <!-- blog -->
-
-		<!-- <section class="lp-bleed-section" style="background-image: url(<?php the_field('big_image_2'); ?>)"></section> -->
 
 		<?php 
 

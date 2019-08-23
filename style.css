@@ -200,29 +200,41 @@ section.lp-bleed-section {
 	color: #4D7536;
 }
 
+.lp-quad-wrapper {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+
+}
+
+.lp-quad {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 170px;
+	margin: 6px;
+}
+
 .lp-quad-1 {
-	width: 40%;
-	overflow: hidden;
-	float: left;
-	padding: 5px;
+	width: 42%;
 }
 .lp-quad-2 {
-	width: 60%;
-	overflow: hidden;
-	float: left;
-	padding: 5px;
+	width: 52%;
 }
 .lp-quad-3 {
-	width: 40%;
-	overflow: hidden;
-	float: left;
-	padding: 5px;
+	width: 42%;
+	height: 250px;
 }
 .lp-quad-4 {
-	width: 60%;
-	overflow: hidden;
-	float: left;
-	padding: 5px;
+	width: 52%;
+	height: 250px;
 }
 
 /* ----------------- T2 ------------------- */
