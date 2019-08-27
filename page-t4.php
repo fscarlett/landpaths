@@ -39,7 +39,6 @@ get_header(); ?>
 				</div>
 				<div class="ast-col-lg-3 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
 					
-
 					<?php 
 
 					$lp_quote = get_field('quote_text');
@@ -55,9 +54,8 @@ get_header(); ?>
 
 						<?php
 					}
-
-
 					 ?>
+					 
 				</div>
 			</div>
 		</section>

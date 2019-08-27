@@ -81,6 +81,10 @@ h4, .h4 {
 	text-transform: none;
 }
 
+hr {
+	background-color: #eee;
+}
+
 .footer-slogan {
 	font-family: 'Roboto Slab', serif;
 	font-size: 3.1rem;
@@ -291,6 +295,16 @@ section.lp-downloads-section {
 	border-radius: 5px;
 }
 
+.wp-block-file a {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px 25px;
+	background: #eee;
+	color: #4D7536;
+	border-radius: 5px;
+
+}
+
 .lp-blog-img-wrapper {
 	height: 250px;
 	background: #fff;
@@ -313,7 +327,33 @@ section.lp-downloads-section {
 	align-items: flex-start;
 }
 
+/* ----------------------   Blog -------------------------  */
 
+body.single-post h1 {
+	margin-bottom: 20px;
+}
+
+.lp-partners-wrapper {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.lp-partners-wrapper img {
+	width: 80px;
+}
+
+
+/* -------------------------------------------------------  */
 
 @media(max-width: 1000px) {
 .lp-illustration img{
