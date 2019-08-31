@@ -48,21 +48,21 @@ get_header(); ?>
 
 			<div class="ast-row">
 				<div class="ast-col-lg-5 ast-col-md-5 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-img-wrapper">
-						<img src="<?php echo $b2_col_1['image']; ?>" alt="<?php echo $b2_col_1['image']['alt']; ?>">
+					<div class="lp-img-wrapper lp-home-block2-image-wrapper" style="background-image: url(<?php echo $b2_col_1['image']; ?>);">
+						<!-- <img src="<?php echo $b2_col_1['image']; ?>" alt="<?php echo $b2_col_1['image']['alt']; ?>"> -->
 					</div>
 					<h3 class="h4"><?php echo $b2_col_1['column_heading']; ?></h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quos nihil expedita, aliquam harum dolor repudiandae nobis reprehenderit molestiae deleniti cum id dolorem aliquid esse magni pariatur hic asperiores, saepe. Aliquid minus magnam maiores in consequatur, veritatis qui incidunt tempore harum officia excepturi odio impedit provident commodi, aspernatur sint sunt. </p>
-					<a href="<?php site_url(); ?>/get-kids-outside/" class="ast-custom-button-link"><button class="ast-custom-button lp-button">Learn More</button></a>
+					<p><?php echo $b2_col_1['copy']; ?></p>
+					<a href="<?php echo $b2_col_1['button_link']; ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php echo $b2_col_1['button_text']; ?></button></a>
 
 				</div>
 				<div class="ast-col-lg-5 ast-col-md-5 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-img-wrapper">
-						<img src="<?php echo $b2_col_2['image']; ?>" alt="">
+					<div class="lp-img-wrapper lp-home-block2-image-wrapper" style="background-image: url(<?php echo $b2_col_2['image']; ?>);">
+						<!-- <img src="<?php echo $b2_col_2['image']; ?>" alt="<?php echo $b2_col_2['image']['alt']; ?>"> -->
 					</div>
-					<h3 class="h4">Spring Break Nature Camp</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione odio atque in et velit maxime voluptates numquam iusto itaque, reiciendis perspiciatis, commodi asperiores dolor debitis ut facilis tempora quisquam. Vero at quas eligendi, consectetur hic ex! Dicta, reiciendis, laboriosam. Rerum, a omnis quis voluptatum maxime sit reprehenderit sequi, repellat! Corporis, amet numquam quis voluptas alias, debitis unde similique minima beatae?</p>
-					<a href="<?php site_url(); ?>/get-kids-outside/" class="ast-custom-button-link"><button class="ast-custom-button lp-button">Learn More</button></a>
+					<h3 class="h4"><?php echo $b2_col_2['column_heading']; ?></h3>
+					<p><?php echo $b2_col_2['copy']; ?></p>
+					<a href="<?php echo $b2_col_2['button_link']; ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php echo $b2_col_2['button_text']; ?></button></a>
 
 				</div>
 				

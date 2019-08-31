@@ -64,8 +64,8 @@ get_header(); ?>
 				<?php if( have_rows('partner_logos') ): ?>
 
 					<section class="lp-blog-partners">
-						<h2 class="h4">Partners</h2>
-							<h3 class="h1"><?php the_field('partners_section_heading'); ?></h3>
+						<h2 class="h4 sans-heading">Partners</h2>
+							<h3 class="h1 sans-heading"><?php the_field('partners_section_heading'); ?></h3>
 							<p><?php the_field('partners_section_copy'); ?></p>
 
 							<div class="lp-partners-wrapper">
@@ -98,9 +98,6 @@ get_header(); ?>
 
 						
 
-					<?php the_post_navigation(); ?>
-
-					<?php  // astra_primary_content_bottom(); ?>
 
 				</div>
 				<div class="ast-col-lg-3 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
@@ -121,7 +118,11 @@ get_header(); ?>
 					}
 					 ?>
 				</div>
-			</div>
+			</div> <!-- ast-row -->
+
+					<?php the_post_navigation(); ?>
+
+					<?php  // astra_primary_content_bottom(); ?>
 		</section>
 
 
