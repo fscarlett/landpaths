@@ -5,7 +5,7 @@
 
 	<p>Give $5 today and your money will go to providing knowledge to kids.</p>
 
-	<a href="<?php site_url(); ?>/get-kids-outside/" class="ast-custom-button-link"><button class="ast-custom-button lp-button">Donate</button></a>
+	<a href="<?php site_url(); ?>/ways-to-give/" class="ast-custom-button-link"><button class="ast-custom-button lp-button">Donate</button></a>
 
 
 
