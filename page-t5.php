@@ -51,7 +51,8 @@ get_header(); ?>
 
 						$lp_blog_args = array(
 				        'order'           => 'DESC',
-				        'posts_per_page'  => '10',
+				        'posts_per_page'  => '12',
+				        'category_name' => 'blog'
 				        );
 
 				      $lp_blog = new WP_Query( $lp_blog_args );
@@ -68,12 +69,13 @@ get_header(); ?>
 				          <div class="lp-masonry-card"> <!--  ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12 -->
 										<div class="lp-blog-img-wrapper">
 											<?php the_post_thumbnail('medium'); ?>
-											<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
 										</div>
 										<div class="lp-blog-copy-card">
-											<h3 class="h4"><?php the_title(); ?></h3> 
-											<p class="lp-post-date"><?php // the_post_date(); ?></p>
-											<a href="<?php the_permalink(); ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button">Read Article</button></a>
+											<h3 class="h4 blog-card-title"><?php the_title(); ?></h3> 
+											<p class="lp-post-date"><?php  $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
+											<?php the_excerpt(''); ?>
+											<p><?php the_tags(); ?></p>
+											<a href="<?php the_permalink(); ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button lp-blog-btn">Read Article</button></a>
 										</div>
 									</div>
 
