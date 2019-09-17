@@ -197,7 +197,7 @@ get_header(); ?>
 			          ?>
 
 			          <div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
-									<div class="lp-blog-img-wrapper">
+									<div class="lp-blog-img-wrapper img-wrapper-250">
 										<?php the_post_thumbnail('medium'); ?>
 										<!-- <img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg" alt=""> -->
 									</div>
@@ -222,41 +222,9 @@ get_header(); ?>
 			</div>
 		</section>  <!-- blog -->
 
-		<!-- <section class="lp_block6_cta_3up lp-section lp-bg-grey ">
-			<div class="ast-container">
-				<p class="h4">Stories + News</p>
-				<h2 class="h1">Nature Journal</h2>
-				<p class="copy-half-width">Our impact is made possible by volunteers like you, with a passion for growing community with nature.</p>
-				<div class="ast-row">
-					<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
-						<div class="lp-3up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-						</div>
-						<div class="lp-white-copy-card">
-							<h3 class="h4">Spring Break Nature Camp</h3> 
-							<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
-						</div>
-					</div>
-					<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
-						<div class="lp-3up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-						</div>
-						<div class="lp-white-copy-card">
-							<h3 class="h4">Spring Break Nature Camp</h3>
-							<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
-						</div>
-					</div>
-					<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
-						<div class="lp-3up-img-wrapper" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/08/Landpaths_Homepage_Photo_Get_Kids_Outside_button.jpg)">
-						</div>
-						<div class="lp-white-copy-card">
-							<h3 class="h4">Spring Break Nature Camp</h3>
-							<a href="<?php site_url(); ?>/get-kids-outside/" class="lp-link ast-custom-button-link">Learn More</a>
-						</div>
-					</div>
-				</div> 
-			</div>
-		</section> -->
+		
 					
-					<?php get_template_part( 'template-parts/newsletter-signup' ); ?>  
+		<?php get_template_part( 'template-parts/newsletter-signup' ); ?>  
 
 
 

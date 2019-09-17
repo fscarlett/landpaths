@@ -207,13 +207,6 @@ section.lp-bleed-section {
   bottom: -20px;
 }
 
-.illo-donate {
-	width: 175px;
-	position: absolute;
-	right: 10px;	
-  bottom: -32px;
-}
-
 .lp-button {
 	font-weight: bold;
 	margin-bottom: 30px;
@@ -453,7 +446,28 @@ body.single-post h1 {
 	background: #e6e6f2;
 }
 
+.img-wrapper-250 {
+	height: 250px;
+}
 
+/* -----------------------  partials ----------------------- */
+
+.white-angle {
+	background: #fff;
+	height: 100px;
+	width: 120%;
+	transform: rotate(6deg);
+	position: relative;
+	top: 25px;
+}
+
+.illo-donate {
+	width: 175px;
+	position: absolute;
+	right: 10px;	
+  bottom: -32px;
+  z-index: 500;
+}
 
 
 
@@ -461,8 +475,11 @@ body.single-post h1 {
 /* -------------------------------------------------------  */
 
 @media(max-width: 1000px) {
-.lp-illustration img{
-	position: initial;
+	.lp-illustration img{
+		position: initial;
+		}
+	.img-wrapper-250 {
+		height: 170px;
 	}
 }
 @media(max-width: 700px) {

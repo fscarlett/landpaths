@@ -8,9 +8,9 @@
 	<a href="<?php site_url(); ?>/ways-to-give/" class="ast-custom-button-link"><button class="ast-custom-button lp-button">Donate</button></a>
 
 
-	<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/LP_illo_acorns.jpg" class="illo-donate lp-phone-hide" alt="">
-
-
+	<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/09/LP_illo_acorns_flip.jpg" class="illo-donate lp-phone-hide" alt="">
 
 
 </section>
+
+<div class="white-angle"></div>
