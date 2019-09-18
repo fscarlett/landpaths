@@ -450,6 +450,22 @@ body.single-post h1 {
 	height: 250px;
 }
 
+
+/* ----------------------------  T3 Contact ------------------ */
+
+#nf-form-title-1 {
+	display: none;
+}
+
+#nf-field-4-wrap.submit-wrap input {
+	background: #4D7536;
+	color: #fff;
+	padding: 15px 40px;
+	height: auto;
+	font-size: 16px;
+	font-weight: 700;
+}
+
 /* ----------------------------  T7 Staff ------------------ */
 
 .exec-staff-row {
@@ -462,6 +478,26 @@ body.single-post h1 {
 
 .staff-member-wrapper p {
 	margin-bottom: 10px;
+}
+
+
+/* ----------------------------  T9 Partners ------------------ */
+
+.logo-wrapper {
+	height: 200px;
+	padding-bottom: 10px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.logo-wrapper img {
+	max-width: 100%;
+	max-height: 170px;
+
 }
 
 

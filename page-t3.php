@@ -15,11 +15,13 @@ get_header(); ?>
 		<section class="lp-section">
 			<div class="ast-container">
 				<div class="ast-row">
-					<div class="ast-col-lg-8 ast-col-md-12 ast-col-sm-12 ast-col-xs-12">
+					<div class="ast-col-lg-6 ast-col-md-12 ast-col-sm-12 ast-col-xs-12">
 
-						<p class="h4">Any Questions?</p>
+						<p class="h4"><?php the_field('page_subheading'); ?></p>
 
-						<h1>We are probably outside...</h1>
+						<h1><?php the_field('page_heading'); ?></h1>
+
+						<p><?php the_field('page_copy'); ?></p>
 
 						<p>Contact us using this form or call / email</p>
 
@@ -32,6 +34,12 @@ get_header(); ?>
 						<?php // astra_content_page_loop(); ?>
 
 						<?php // astra_primary_content_bottom(); ?>
+
+					</div>
+
+					<div class="ast-col-lg-6 ast-col-md-12 ast-col-sm-12 ast-col-xs-12">
+
+						<?php echo do_shortcode('[ninja_form id=1]'); ?>
 
 					</div>
 

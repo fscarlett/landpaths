@@ -17,11 +17,11 @@ get_header(); ?>
 				<div class="ast-row">
 					<div class="ast-col-lg-8 ast-col-md-12 ast-col-sm-12 ast-col-xs-12">
 
-						<p class="h4">Community Works</p>
+						<p class="h4"><?php the_field('sub_heading'); ?></p>
 
-						<h1>Partners inthe Big Outside</h1>
+						<h1><?php the_field('page_heading'); ?></h1>
 
-						<p>We believe strongly in the “ecosystem” model of successful community work and engagement. Support from our partners and corporate donors helps LandPaths creative opportunities for transformative relationships with nature.</p>
+						<p><?php the_field('page_copy'); ?></p>
 
 
 
@@ -41,7 +41,33 @@ get_header(); ?>
 		<section class="lp-section ast-container">
 			<h2>Corporate Sponsors</h2>
 
-			<h3>Sponsors loop goes here</h3>
+			<?php if( have_rows('corporate_sponsors') ): ?>
+
+					<div class="ast-row partners-wrapper">
+
+						<?php while( have_rows('corporate_sponsors') ): the_row(); 
+
+							$logo = get_sub_field('logo');
+
+							if ($logo):
+
+						?>
+
+							<div class="ast-col-lg-2 ast-col-md-2 ast-col-sm-3 ast-col-xs-4 logo-wrapper">
+
+							    <img src="<?php the_sub_field('logo'); ?>" alt="">
+
+							</div>
+
+						<?php 
+
+						endif;
+
+					endwhile; ?>
+
+					</div>
+
+			<?php endif; ?>
 
 			
 		</section>
@@ -49,9 +75,40 @@ get_header(); ?>
 		<section class="lp-section ast-container">
 			<h2>Partner Agencies and Organizations</h2>
 
-			<h3>Partners loop goes here</h3>
+			<?php if( have_rows('partner_orgs') ): ?>
 
+					<div class="ast-row partners-wrapper">
 
+						<?php while( have_rows('partner_orgs') ): the_row(); 
+
+							$logo = get_sub_field('logo');
+
+							if ($logo):
+
+						?>
+
+							<div class="ast-col-lg-2 ast-col-md-2 ast-col-sm-3 ast-col-xs-4 logo-wrapper">
+
+							    <img src="<?php the_sub_field('logo'); ?>" alt="">
+
+							</div>
+
+						<?php 
+
+						endif;
+
+					endwhile; ?>
+
+					</div>
+
+			<?php endif; ?>
+
+		</section>
+
+		<section class="ast-container lp-section">
+			<p><?php the_field('partners_bottom_copy'); ?></p>
+
+			<?php echo do_shortcode('[ninja_form id=1]'); ?>
 		</section>
 
 
