@@ -464,6 +464,26 @@ body.single-post h1 {
 	margin-bottom: 10px;
 }
 
+
+/* ----------------------------  T9 Board ------------------ */
+
+.page-template-page-t9 h1 {
+	margin-bottom: 50px;
+}
+
+.board-wrapper h3 {
+	margin-bottom: 10px;
+}
+
+.board-wrapper h4 {
+	margin-bottom: 5px;
+}
+
+.board-wrapper p.board-bio {
+	margin-bottom: 40px;
+	max-width: 800px;
+}
+
 /* -----------------------  partials ----------------------- */
 
 .white-angle {
