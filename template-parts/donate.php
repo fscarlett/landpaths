@@ -13,4 +13,5 @@
 
 </section>
 
+<div class="white-backtilt"></div>
 <div class="white-angle"></div>

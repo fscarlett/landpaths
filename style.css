@@ -26,10 +26,13 @@ light green #A6AB69
     font-weight: bold;
 }
 
-@media (min-width: 769px) {
-	.ast-footer-overlay {
-	    padding-top: 10px;
-	    padding-bottom: 60px;
+@media (min-width: 768px) {
+	
+	.footer-adv-widget-3 {
+		max-width: 150px;
+	}
+	.footer-adv-widget-4 {
+		width: 70%;
 	}
 }
 
@@ -37,7 +40,18 @@ light green #A6AB69
 	.footer-adv-layout-7 .footer-adv-widget-1 {
 	    text-align: left;
 	}
+	.ast-footer-overlay {
+	    padding-top: 10px;
+	    padding-bottom: 60px;
+	}
 }
+
+@media (max-width: 768px){
+	.footer-adv-widget-3 {
+		display: none;
+	}
+}
+
 
 .footer-adv-overlay {
     padding-top: 50px;
@@ -47,6 +61,8 @@ light green #A6AB69
 .entry-content {
 	padding-bottom: 50px;
 }
+
+
 
 /* -----------  Landpaths ------------------ */
 
@@ -532,20 +548,34 @@ body.single-post h1 {
 
 /* -----------------------  partials ----------------------- */
 
+.lp-donate {
+	padding-bottom: 0 !important;
+}
+
 .white-angle {
 	background: #fff;
 	height: 100px;
 	width: 120%;
-	transform: rotate(6deg);
+	transform: rotate(3deg);
 	position: relative;
 	top: 25px;
+}
+
+.white-backtilt {
+	background: #fff;
+	height: 100px;
+	width: 120%;
+	transform: rotate(-8deg);
+	position: relative;
+	top: 37px;
+	left: -27px;
 }
 
 .illo-donate {
 	width: 175px;
 	position: absolute;
 	right: 10px;	
-  bottom: -32px;
+  bottom: 0px;
   z-index: 500;
 }
 
