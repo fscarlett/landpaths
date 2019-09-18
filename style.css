@@ -97,6 +97,16 @@ hr {
 	font-weight: bold;
 }
 
+i.fa {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+a i.fa {
+  font-size: 50px;
+  margin-right: 50px;
+}
+
 .copy-half-width {
 	max-width: 500px;
 	margin-bottom: 50px;
