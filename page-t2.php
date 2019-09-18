@@ -109,7 +109,7 @@ get_header(); ?>
 
 					<div class="thingy"></div>
 
-					<div class="activity-wrapper">
+					<div class="activity-wrapper ast-row">
 
 						<?php while( have_rows('activity') ): the_row(); 
 

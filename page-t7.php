@@ -14,15 +14,6 @@ get_header(); ?>
 
 		<section class="lp-section">
 			<div class="ast-container">
-				<div class="ast-row">
-					<div class="ast-col-lg-12 ast-col-md-12 ast-col-sm-12 ast-col-xs-12">
-
-						<h2>Featured person goes here</h2>
-
-					</div>
-
-				</div>
-				
 
 				<div class="ast-row">
 					<div class="ast-col-lg-12 ast-col-md-12 ast-col-sm-12 ast-col-xs-12">
@@ -42,30 +33,121 @@ get_header(); ?>
 			</div>
 		</section>
 
+		<!-- Executive staff section -->
+
 		<section class="staff-section lp-section ast-container">
 
-			<h2><?php the_field('staff_heading'); ?></h2>
 
-			<h2>HEADING</h2>
+			<!-- <h2>STAFF</h2> -->
 
-			<div class="thingy"></div>
-
-			<p>People grid goes here</p>
+			<!-- <div class="thingy"></div>  -->
 
 
+			<?php if( have_rows('executive_staff') ): ?>
 
 
+					<div class="ast-row">
+
+						<?php while( have_rows('executive_staff') ): the_row(); 
+
+							$name = get_sub_field('name');
+							$title = get_sub_field('title');
+							$email = get_sub_field('email');
+							$phone = get_sub_field('phone');
+							$bio = get_sub_field('bio');
+							$photo = get_sub_field('photo');
+
+						?>
+
+								<?php if ($bio): ?>
+
+								<div class="ast-row exec-staff-row">
+									<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
+											<img src="<?php echo $photo; ?>" />
+
+									</div>
+
+									<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
+
+									    <h4><?php echo $title; ?></h4>
+
+											<h3><?php echo $name; ?></h3>
+											<p><?php echo $bio; ?></p>
+									    <p><?php echo $email; ?></p>
+									    <p><?php echo $phone; ?></p>
+
+									</div>
+								</div>
+
+							<?php endif; ?>
+
+							<?php if (!$bio): ?>
+								<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
+
+									<img src="<?php echo $photo; ?>" />
+
+							    <h4><?php echo $title; ?></h4>
+
+									<h3><?php echo $name; ?></h3>
+							    <p><?php echo $email; ?></p>
+							    <p><?php echo $phone; ?></p>
+
+								</div>
+							<?php endif; ?>
+
+						<?php endwhile; ?>
+
+					</div>
+
+			<?php endif; ?>
+
+		</section> <!-- end Executive staff section -->
+
+		<section class="staff-section lp-section ast-container">
+
+			<h2><?php // the_field('staff_heading'); ?></h2>
+
+			<h2>STAFF</h2>
+
+			<div class="thingy"></div> 
+
+
+			<?php if( have_rows('staff_member') ): ?>
+
+
+					<div class="staff-member-wrapper ast-row">
+
+						<?php while( have_rows('staff_member') ): the_row(); 
+
+							$name = get_sub_field('name');
+							$title = get_sub_field('title');
+							$email = get_sub_field('email');
+							$phone = get_sub_field('phone');
+							// $bio = get_sub_field('bio');
+							$photo = get_sub_field('photo');
+
+						?>
+
+							<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12">
+
+									<img src="<?php echo $photo; ?>" />
+
+									<h4><?php echo $name; ?></h4>
+
+							    <h5><?php echo $title; ?></h5>
+
+							    <p><?php echo $email; ?></p>
+							    <p><?php echo $phone; ?></p>
+
+							</div>
+
+						<?php endwhile; ?>
+
+						</div>
+
+			<?php endif; ?>
 
 		</section>
-
-
-
-
-
-		
-
-
-
 
 					
 		<?php get_template_part( 'template-parts/donate' ); ?>  

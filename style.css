@@ -450,6 +450,20 @@ body.single-post h1 {
 	height: 250px;
 }
 
+/* ----------------------------  T7 Staff ------------------ */
+
+.exec-staff-row {
+	margin-bottom: 30px;
+}
+
+.staff-member-wrapper {
+
+}
+
+.staff-member-wrapper p {
+	margin-bottom: 10px;
+}
+
 /* -----------------------  partials ----------------------- */
 
 .white-angle {
