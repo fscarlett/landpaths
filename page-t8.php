@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: T8
+ * Template Name: T8 Partners
  *
  * @package Astra
  * @since 1.0.0

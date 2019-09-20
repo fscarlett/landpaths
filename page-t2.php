@@ -20,6 +20,9 @@ get_header(); ?>
 
 				endif;
 
+					$lp_quote = get_field('quote_text');
+
+
 		 ?>
 
 		<section class="lp-bleed-section" style="background-image: url(<?php echo $lp_hero; ?>)"></section>
@@ -28,7 +31,7 @@ get_header(); ?>
 			<p class="h4"><?php the_field('subtitle'); ?></p>
 
 			<div class="ast-row">
-				<div class="ast-col-lg-9 ast-col-md-8 ast-col-sm-12 ast-col-xs-12 lp-border-right">
+				<div class="ast-col-lg-9 ast-col-md-8 ast-col-sm-12 ast-col-xs-12 <?php if($lp_quote): ?> lp-border-right <?php endif; ?>">
 			
 					<?php // astra_primary_content_top(); ?>
 
@@ -42,12 +45,11 @@ get_header(); ?>
 
 					<?php 
 
-					$lp_quote = get_field('quote_text');
 
 					if($lp_quote) {  ?>
 
 						<p class="h4"><?php the_field('quote_author'); ?></p>
-						<p>" <?php the_field('quote_text'); ?> "</p>
+						<p class="quotetext">" <?php the_field('quote_text'); ?> "</p>
 
 					<?php } else { ?>
 
@@ -81,7 +83,7 @@ get_header(); ?>
 
 							<div class="ast-col-lg-4 ast-col-md-6 ast-col-sm-12 ast-col-xs-12 lp-quote-card">
 
-							    <p class=""><?php the_sub_field('quote_text'); ?></p>
+							    <p class="quotetext">" <?php the_sub_field('quote_text'); ?> "</p>
 
 							    <p class="quote-author"><?php the_sub_field('quote_author'); ?></p>
 

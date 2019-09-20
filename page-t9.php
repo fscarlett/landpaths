@@ -51,9 +51,10 @@ get_header(); ?>
 
 							<div class="ast-col-lg-12 ast-col-md-12 ast-col-sm-12 ast-col-xs-12">
 
+									<h3><?php echo $name; ?></h3>
+
 							    <h4><?php echo $title; ?></h4>
 
-									<h3><?php echo $name; ?></h3>
 									<p class="board-bio"><?php echo $bio; ?></p>
 
 							</div>

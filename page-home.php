@@ -24,7 +24,7 @@ get_header(); ?>
 
 					<p><?php the_field('paragraph_1') ?></p>
 					<p><?php the_field('paragraph_2') ?></p>
-					<a href="<?php site_url(); ?>/get-kids-outside/" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php the_field('block_1_button_text'); ?></button></a>
+					<a href="<?php the_field('block_1_button_link'); ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php the_field('block_1_button_text'); ?></button></a>
 
 				</div>
 				<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">

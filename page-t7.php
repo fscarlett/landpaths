@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: T7
+ * Template Name: T7 Staff
  *
  * @package Astra
  * @since 1.0.0
@@ -35,7 +35,7 @@ get_header(); ?>
 
 		<!-- Executive staff section -->
 
-		<section class="staff-section lp-section ast-container">
+		<section class="staff-section executive-staff-section lp-section ast-container">
 
 
 			<!-- <h2>STAFF</h2> -->
@@ -69,9 +69,10 @@ get_header(); ?>
 
 									<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
 
+											<h3><?php echo $name; ?></h3>
+
 									    <h4><?php echo $title; ?></h4>
 
-											<h3><?php echo $name; ?></h3>
 											<p><?php echo $bio; ?></p>
 									    <p><?php echo $email; ?></p>
 									    <p><?php echo $phone; ?></p>
@@ -82,13 +83,14 @@ get_header(); ?>
 							<?php endif; ?>
 
 							<?php if (!$bio): ?>
-								<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
+								<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12 lp-staff-card">
 
 									<img src="<?php echo $photo; ?>" />
 
-							    <h4><?php echo $title; ?></h4>
+									<h4><?php echo $name; ?></h4>
 
-									<h3><?php echo $name; ?></h3>
+							    <p class="staff-title"><?php echo $title; ?></p>
+
 							    <p><?php echo $email; ?></p>
 							    <p><?php echo $phone; ?></p>
 
@@ -128,13 +130,13 @@ get_header(); ?>
 
 						?>
 
-							<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12">
+							<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12 lp-staff-card">
 
 									<img src="<?php echo $photo; ?>" />
 
 									<h4><?php echo $name; ?></h4>
 
-							    <h5><?php echo $title; ?></h5>
+							    <p class="staff-title"><?php echo $title; ?></p>
 
 							    <p><?php echo $email; ?></p>
 							    <p><?php echo $phone; ?></p>
