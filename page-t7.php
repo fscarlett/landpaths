@@ -35,6 +35,60 @@ get_header(); ?>
 			</div>
 		</section>
 
+				<!-- ----------------------------------------------------  STAFF SECTION 1 --------------------------------------------------------- -->
+
+		<section class="staff-section lp-section ast-container">
+
+			<h2>Executive Team</h2>
+
+			<div class="thingy"></div> 
+
+			<?php if( have_rows( 'section_1_executive' ) ): ?>
+
+				<?php  while( have_rows( 'section_1_executive' ) ): the_row(); ?>
+
+				<?php if( have_rows('staff_member') ): ?>
+
+					<div class="staff-member-wrapper ast-row">
+
+						<?php while( have_rows('staff_member') ): the_row(); 
+
+							$name = get_sub_field('name');
+							$title = get_sub_field('title');
+							$email = get_sub_field('email');
+							$phone = get_sub_field('phone');
+							$photo = get_sub_field('photo');
+
+						?>
+
+							<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12 lp-staff-card">
+
+								<div class="staff-photo-wrapper" style="background-image: url(<?php echo $photo; ?>)"></div>
+
+								<!-- <img src="<?php echo $photo; ?>" /> -->
+
+								<h4><?php echo $name; ?></h4>
+
+						    <p class="staff-title"><?php echo $title; ?></p>
+
+						    <p><?php echo $email; ?></p>
+						    <p><?php echo $phone; ?></p>
+
+							</div>
+
+						<?php endwhile; ?>
+
+						</div>
+
+				<?php endif;
+
+					 endwhile;
+
+				  endif; 
+			  ?>
+
+		</section>
+
 
 		<!-- ----------------------------------------------------  STAFF SECTION 2 --------------------------------------------------------- -->
 
@@ -64,14 +118,16 @@ get_header(); ?>
 
 							<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12 lp-staff-card">
 
-									<img src="<?php echo $photo; ?>" />
+								<div class="staff-photo-wrapper" style="background-image: url(<?php echo $photo; ?>)"></div>
 
-									<h4><?php echo $name; ?></h4>
+								<!-- <img src="<?php echo $photo; ?>" /> -->
 
-							    <p class="staff-title"><?php echo $title; ?></p>
+								<h4><?php echo $name; ?></h4>
 
-							    <p><?php echo $email; ?></p>
-							    <p><?php echo $phone; ?></p>
+						    <p class="staff-title"><?php echo $title; ?></p>
+
+						    <p><?php echo $email; ?></p>
+						    <p><?php echo $phone; ?></p>
 
 							</div>
 
@@ -117,14 +173,16 @@ get_header(); ?>
 
 							<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12 lp-staff-card">
 
-									<img src="<?php echo $photo; ?>" />
+								<div class="staff-photo-wrapper" style="background-image: url(<?php echo $photo; ?>)"></div>
 
-									<h4><?php echo $name; ?></h4>
+								<!-- <img src="<?php echo $photo; ?>" /> -->
 
-							    <p class="staff-title"><?php echo $title; ?></p>
+								<h4><?php echo $name; ?></h4>
 
-							    <p><?php echo $email; ?></p>
-							    <p><?php echo $phone; ?></p>
+						    <p class="staff-title"><?php echo $title; ?></p>
+
+						    <p><?php echo $email; ?></p>
+						    <p><?php echo $phone; ?></p>
 
 							</div>
 
@@ -170,14 +228,16 @@ get_header(); ?>
 
 							<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12 lp-staff-card">
 
-									<img src="<?php echo $photo; ?>" />
+								<div class="staff-photo-wrapper" style="background-image: url(<?php echo $photo; ?>)"></div>
 
-									<h4><?php echo $name; ?></h4>
+								<!-- <img src="<?php echo $photo; ?>" /> -->
 
-							    <p class="staff-title"><?php echo $title; ?></p>
+								<h4><?php echo $name; ?></h4>
 
-							    <p><?php echo $email; ?></p>
-							    <p><?php echo $phone; ?></p>
+						    <p class="staff-title"><?php echo $title; ?></p>
+
+						    <p><?php echo $email; ?></p>
+						    <p><?php echo $phone; ?></p>
 
 							</div>
 
@@ -223,14 +283,16 @@ get_header(); ?>
 
 							<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12 lp-staff-card">
 
-									<img src="<?php echo $photo; ?>" />
+								<div class="staff-photo-wrapper" style="background-image: url(<?php echo $photo; ?>)"></div>
 
-									<h4><?php echo $name; ?></h4>
+								<!-- <img src="<?php echo $photo; ?>" /> -->
 
-							    <p class="staff-title"><?php echo $title; ?></p>
+								<h4><?php echo $name; ?></h4>
 
-							    <p><?php echo $email; ?></p>
-							    <p><?php echo $phone; ?></p>
+						    <p class="staff-title"><?php echo $title; ?></p>
+
+						    <p><?php echo $email; ?></p>
+						    <p><?php echo $phone; ?></p>
 
 							</div>
 

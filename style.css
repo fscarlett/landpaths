@@ -533,6 +533,29 @@ body.single-post h1 {
 	margin-bottom: 10px;
 }
 
+.staff-photo-wrapper {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.staff-photo-wrapper {
+		width: 100%;
+		height: 60vw;
+	}
+
+@media(min-width: 768px) {
+	.staff-photo-wrapper {
+		width: 100%;
+		height: 15vw;
+	}
+}
+
+.lp-staff-card {
+	margin-bottom: 40px;
+	min-height: 340px;
+}
+
 .lp-staff-card h4 {
 	margin-top: 30px;
 	margin-bottom: 0;
