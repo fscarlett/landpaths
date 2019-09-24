@@ -1,9 +1,9 @@
 <section class="lp-email-signup lp-section ast-container">
-	<p class="h4">Keep in touch</p>
+	<p class="h4"><?php the_field('newsletter_signup_subtitle', 5); ?></p>
 
-	<h2 class="h1">New ways to love the land</h2>
+	<h2 class="h1"><?php the_field('newsletter_signup_title', 5); ?></h2>
 
-	<p>Our Monthly Newsletter shares new classes, stories, ways to volunteer.</p>
+	<p><?php the_field('newsletter_signup_paragraph', 5); ?></p>
 
 	<div class="lp-mailchimp-wrapper">
 		<!-- Begin Mailchimp Signup Form -->

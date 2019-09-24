@@ -62,7 +62,7 @@ get_header(); ?>
 					</div>
 					<h3 class="h4"><?php echo $b2_col_2['column_heading']; ?></h3>
 					<p><?php echo $b2_col_2['copy']; ?></p>
-					<a href="<?php echo $b2_col_2['button_link']; ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php echo $b2_col_2['button_text']; ?></button></a>
+					<a href="<?php echo $b2_col_2['button_link']; ?>" class="ast-custom-button-link" ><button class="ast-custom-button lp-button"><?php echo $b2_col_2['button_text']; ?></button></a>
 
 				</div>
 				
@@ -130,41 +130,44 @@ get_header(); ?>
 			<div class="ast-row">
 
 				<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_1_image') ?>)">
+					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_1_image'); ?>)">
 					</div>
-					<h3 class="h4"><?php the_field('outing_1_title') ?></h3>
-					<p><?php the_field('outing_1_copy') ?></p>
-					<a href="<?php the_field('outing_1_link') ?>" class="lp-link ast-custom-button-link">Learn More</a>
+					<h3 class="h4"><?php the_field('outing_1_title'); ?></h3>
+					<p><?php the_field('outing_1_copy'); ?></p>
+
+					<a href="<?php the_field('outing_1_link'); ?>" class="lp-link ast-custom-button-link" target="_blank" rel="nofollow"><?php the_field('outing_1_link_text'); ?></a>
+					
+
 				</div>
 
 				<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_2_image') ?>)">
+					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_2_image'); ?>)">
 					</div>
-					<h3 class="h4"><?php the_field('outing_2_title') ?></h3>
-					<p><?php the_field('outing_2_copy') ?></p>
-					<a href="<?php the_field('outing_2_link') ?>" class="lp-link ast-custom-button-link">Learn More</a>
+					<h3 class="h4"><?php the_field('outing_2_title'); ?></h3>
+					<p><?php the_field('outing_2_copy'); ?></p>
+					<a href="<?php the_field('outing_2_link'); ?>" class="lp-link ast-custom-button-link" target="_blank" rel="nofollow"><?php the_field('outing_2_link_text'); ?></a>
 				</div>
 
 				<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_3_image') ?>)">
+					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_3_image'); ?>)">
 					</div>
-					<h3 class="h4"><?php the_field('outing_3_title') ?></h3>
-					<p><?php the_field('outing_3_copy') ?></p>
-					<a href="<?php the_field('outing_3_link') ?>" class="lp-link ast-custom-button-link">Learn More</a>
+					<h3 class="h4"><?php the_field('outing_3_title'); ?></h3>
+					<p><?php the_field('outing_3_copy'); ?></p>
+					<a href="<?php the_field('outing_3_link'); ?>" class="lp-link ast-custom-button-link" target="_blank" rel="nofollow"><?php the_field('outing_3_link_text'); ?></a>
 				</div>
 
 				<div class="ast-col-lg-3 ast-col-md-3 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_4_image') ?>)">
+					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_4_image'); ?>)">
 					</div>
-					<h3 class="h4"><?php the_field('outing_4_title') ?></h3>
-					<p><?php the_field('outing_4_copy') ?></p>
-					<a href="<?php the_field('outing_4_link') ?>" class="lp-link ast-custom-button-link">Learn More</a>
+					<h3 class="h4"><?php the_field('outing_4_title'); ?></h3>
+					<p><?php the_field('outing_4_copy'); ?></p>
+					<a href="<?php the_field('outing_4_link'); ?>" class="lp-link ast-custom-button-link" target="_blank" rel="nofollow"><?php the_field('outing_4_link_text'); ?></a>
 				</div>
 				
 			</div>
 		</section>
 
-		<section class="lp-bleed-section" style="background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/07/CSP-Bohemia-03.jpg)"></section>
+		<section class="lp-bleed-section" style="background-image: url(<?php the_field('big_image_3'); ?>"></section>
 
 				<!-- blog section -->
 		<section class="lp_block6_cta_3up blog-section lp-section lp-bg-grey ">

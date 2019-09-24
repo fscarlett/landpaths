@@ -309,6 +309,7 @@ body.page-template-page-t2 .entry-header {
 .lp-quote-section .lp-quote-card {
 	padding: 35px 25px;
 	margin-right: 25px;
+	margin-bottom: 25px;
 	background: #fff;
 	/*min-height: 350px;*/
 }

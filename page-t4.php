@@ -77,6 +77,7 @@ get_header(); ?>
 					$description = get_sub_field('description');
 					$button_text = get_sub_field('button_text');
 					$button_link = get_sub_field('button_link');
+					$new_tab = get_sub_field('new_tab');
 
 				?>
 
@@ -88,7 +89,7 @@ get_header(); ?>
 
 					    <p><?php echo $description; ?></p>
 
-					    <a href="<?php echo $button_link; ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php echo $button_text; ?></button></a>
+					    <a href="<?php echo $button_link; ?>" <?php if( $new_tab ): ?> target="_blank"  rel="nofollow"<?php endif; ?>class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php echo $button_text; ?></button></a>
 
 					</div>
 
@@ -119,7 +120,7 @@ get_header(); ?>
 							?>
 								<p><?php the_sub_field('description'); ?></p>
 
-								<p class="lp-download"><a href="<?php echo $file; ?>"><?php echo $label; ?></a></p>
+								<p class="lp-download"><a href="<?php echo $file; ?>" target="_blank" rel="nofollow"><?php echo $label; ?></a></p>
 								<p></p>
 
 							<?php endwhile; ?>
@@ -138,9 +139,9 @@ get_header(); ?>
 		<!-- blog section -->
 		<section class="lp_block6_cta_3up blog-section lp-section lp-bg-grey ">
 			<div class="ast-container">
-				<p class="h4">Stories + News</p>
+				<p class="h4"><?php the_field('blog_section_name'); ?></p>
 				<h2 class="h1"><?php the_field('blog_section_heading'); ?></h2>
-				<p class="copy-half-width"><?php the_field('blog_section_subheading') ?></p>
+				<p class="copy-half-width"><?php the_field('blog_section_subheading'); ?></p>
 				<div class="ast-row">
 
 					<?php 

@@ -83,7 +83,10 @@ get_header(); ?>
 
 							<div class="ast-col-lg-4 ast-col-md-6 ast-col-sm-12 ast-col-xs-12 lp-quote-card">
 
+
 							    <p class="quotetext">" <?php the_sub_field('quote_text'); ?> "</p>
+
+									<p><i class="fa fa-user"></i></p>
 
 							    <p class="quote-author"><?php the_sub_field('quote_author'); ?></p>
 
