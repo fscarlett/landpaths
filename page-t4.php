@@ -81,9 +81,12 @@ get_header(); ?>
 
 				?>
 
-					<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
+					<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12 lp-activity-card"> 
 
-							<img src="<?php echo $image; ?>" alt="<?php echo $image['alt'] ?>" />
+							<div class="lp-activity-img-wrapper" style="background-image: url(<?php echo $image; ?>)"></div>
+
+
+							<!-- <img src="<?php echo $image; ?>" alt="<?php echo $image['alt'] ?>" /> -->
 
 					    <h3 class="h4"><?php echo $title; ?></h3>
 
@@ -134,6 +137,43 @@ get_header(); ?>
 			</section>
 
 		<?php endif; ?>
+
+
+
+		<!-- partners section -->
+
+		<?php if( have_rows('t4_partners') ): ?>
+
+			<section class="lp-blog-partners ast-container">
+				<h2 class="h4 sans-heading">Partners</h2>
+					<h3 class="h1 sans-heading"><?php the_field('partners_section_title'); ?></h3>
+					<!-- <p><?php the_field('partners_section_copy'); ?></p> -->
+
+					<div class="lp-t4-partners-wrapper">
+
+						<?php 
+
+							    while ( have_rows('t4_partners') ) : the_row();
+			    	?>
+
+				    	<a href="<?php the_sub_field('partner_link'); ?>" class="lp-t4-partners-card" target="_blank" rel="nofollow">
+
+								<img src="<?php the_sub_field('partner_logo'); ?>" alt="">
+
+								<span class="lp-partner-name"><?php the_sub_field('partner_name'); ?></span>
+
+							</a>
+
+		        <?php
+
+							    endwhile;
+
+				    ?>
+				  </div>
+
+			</section>
+
+		<?php	endif; ?>
 
 
 		<!-- blog section -->

@@ -337,6 +337,85 @@ body.page-template-page-t4 .entry-header {
 	margin-top: 30px;
 }
 
+
+
+
+
+/* ----------  masonry for T4 Activities ssection ---------------- */
+
+
+@media(min-width: 768px){
+
+	.lp-activity-card {
+		/*min-height: 500px;*/
+		margin-bottom: 20px;
+		width: 50%;
+	}
+
+	/* Render items as columns */
+	.activity-wrapper {
+	  display: flex;
+	  flex-flow: column wrap;
+	  align-content: space-between;
+	  /* Your container needs a fixed height, and it 
+	   * needs to be taller than your tallest column. */
+	  height: 1500px;
+	}
+
+	/* Re-order items into rows */
+	.lp-activity-card:nth-child(2n+1) { order: 1; }
+	.lp-activity-card:nth-child(2n+2) { order: 2; }
+	/*.lp-activity-card:nth-child(3n)   { order: 3; }*/
+
+	/* Force new columns */
+	.activity-wrapper::before,
+	.activity-wrapper::after {
+	  content: "";
+	  flex-basis: 100%;
+	  width: 0;
+	  order: 2;
+	}
+
+}
+
+@media(min-width: 992px){
+	.activity-wrapper {
+		height: 2000px;
+	}
+}
+
+@media(max-width: 767px){
+.activity-wrapper {
+	/*height: 6000px;*/
+}
+	.lp-activity-card {
+		margin-bottom: 20px;
+		width: 96%;
+	}
+}
+
+/* -------------------------------------------------------------- */
+
+
+
+
+
+
+.lp-activity-img-wrapper {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 60vw;
+	}
+
+@media(min-width: 768px) {
+	.lp-activity-img-wrapper {
+		width: 100%;
+		height: 35vw;
+	}
+}
+
 section.lp-downloads-section {
 	padding-bottom: 0;
 }
@@ -357,6 +436,49 @@ section.lp-downloads-section {
 	color: #4D7536;
 	border-radius: 5px;
 }
+
+.lp-t4-partners-wrapper {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	
+}
+
+.lp-t4-partners-card {
+	width: 20%;
+	min-width: 150px;
+	padding: 20px;
+	text-align: center;
+}
+
+@media(max-width: 992px) {
+	.lp-t4-partners-card {
+		width: 30%;
+		min-width: 150px;
+	}
+}
+
+@media(max-width: 767px) {
+	.lp-t4-partners-card {
+		width: 50%;
+		min-width: 130px;
+	}
+}
+
+.lp-partner-name {
+	display: block;
+	margin: 10px auto;
+}
+
 
 .wp-block-file a {
 	font-size: 20px;
