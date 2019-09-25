@@ -68,7 +68,7 @@ get_header(); ?>
 			<?php if( have_rows('activity') ): ?>
 			<div class="thingy"></div>
 
-			<div class="activity-wrapper ast-row">
+			<div class="activity-wrapper ast-row" id="activities">
 
 				<?php while( have_rows('activity') ): the_row(); 
 
@@ -102,6 +102,45 @@ get_header(); ?>
 
 			<?php endif; ?>
 		</section>
+
+		<script>
+			// var cardArray = document.getElementsByClassName('lp-activity-card');
+			// var heightsArray = [];
+			// var finalArray = [];
+			// var hite;
+			// var hiteWinner;
+			// // var h = cardArray[0].offsetHeight;
+
+			// console.log(cardArray);
+
+			// // cardArray.forEach(e => 
+			// Array.prototype.forEach.call(cardArray, e => {
+			// 	hite = e.offsetHeight;
+			// 	heightsArray.push(hite);
+			// });
+
+			// for (var i = 0; i < heightsArray.length; i++) {
+			// 	if ( i % 0 == 0 ) {
+			// 		hiteWinner =	heightsArray[0+i] > heightsArray[1+i] ? heightsArray[0+i] :  heightsArray[1+i];
+			// 		finalArray.push(hiteWinner);
+			// 	}
+			// }
+
+			// var theFreakingHeight;
+			// for (var i = 0; i < finalArray.length; i++) {
+			// 	theFreakingHeight = theFreakingHeight + finalArray[i];
+			// }
+
+			// console.log('tfh = ' + theFreakingHeight);
+
+			// document.getElementById('activities').style.height = theFreakingHeight + 'px';
+
+		</script>
+
+
+
+
+
 
 		<?php if ( have_rows('downloads') ): ?>
 
@@ -174,6 +213,8 @@ get_header(); ?>
 			</section>
 
 		<?php	endif; ?>
+
+		
 
 
 		<!-- blog section -->

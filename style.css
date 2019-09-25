@@ -385,9 +385,7 @@ body.page-template-page-t4 .entry-header {
 }
 
 @media(max-width: 767px){
-.activity-wrapper {
-	/*height: 6000px;*/
-}
+
 	.lp-activity-card {
 		margin-bottom: 20px;
 		width: 96%;
