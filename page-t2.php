@@ -170,17 +170,21 @@ get_header(); ?>
 					hiteWinner =	heightsArray[i-1] > heightsArray[i] ? heightsArray[i-1] :  heightsArray[i];
 					finalArray.push(hiteWinner);
 				}
-				else if (i + 1 == heightsArray.length && i+1 % 2 == 1 ) {
-					console.log('hello last');
-
-					finalArray.push(heightsArray[i + 1]);
+				else if ( heightsArray.length == 1 ) {
+					console.log('hello first and only');
+					finalArray.push(heightsArray[0]);
+				}
+				else if (i + 1 == heightsArray.length  ) {
+					console.log('hello last odd');
+					finalArray.push(heightsArray[i]);
 				}
 			}
 
 			console.log('heightsArray: '+ heightsArray);
+			console.log('heightsArray length: '+ heightsArray.length);
 			console.log('finalArray: '+ finalArray);
 
-			var theFreakingHeight = 500;
+			var theFreakingHeight = 300;
 			for (var i = 0; i < finalArray.length; i++) {
 				theFreakingHeight = theFreakingHeight + finalArray[i];
 			}
