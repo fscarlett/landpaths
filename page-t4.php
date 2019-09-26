@@ -104,36 +104,46 @@ get_header(); ?>
 		</section>
 
 		<script>
-			// var cardArray = document.getElementsByClassName('lp-activity-card');
-			// var heightsArray = [];
-			// var finalArray = [];
-			// var hite;
-			// var hiteWinner;
-			// // var h = cardArray[0].offsetHeight;
+			// Gets heights of Activity cards, finds tallest in each row, adds rows for height of masonry wrapper.
+			var cardArray = document.getElementsByClassName('lp-activity-card');
+			var heightsArray = [];
+			var finalArray = [];
+			var hite;
+			var hiteWinner;
 
-			// console.log(cardArray);
+			console.log(cardArray);
 
-			// // cardArray.forEach(e => 
-			// Array.prototype.forEach.call(cardArray, e => {
-			// 	hite = e.offsetHeight;
-			// 	heightsArray.push(hite);
-			// });
 
-			// for (var i = 0; i < heightsArray.length; i++) {
-			// 	if ( i % 0 == 0 ) {
-			// 		hiteWinner =	heightsArray[0+i] > heightsArray[1+i] ? heightsArray[0+i] :  heightsArray[1+i];
-			// 		finalArray.push(hiteWinner);
-			// 	}
-			// }
+			Array.prototype.forEach.call(cardArray, e => {
+				hite = e.offsetHeight;
+				heightsArray.push(hite);
+			});
 
-			// var theFreakingHeight;
-			// for (var i = 0; i < finalArray.length; i++) {
-			// 	theFreakingHeight = theFreakingHeight + finalArray[i];
-			// }
+			for (var i = 0; i < heightsArray.length; i++) {
 
-			// console.log('tfh = ' + theFreakingHeight);
+				if ( i % 2 == 1 ) {
+					console.log('hello2');
+					hiteWinner =	heightsArray[i-1] > heightsArray[i] ? heightsArray[i-1] :  heightsArray[i];
+					finalArray.push(hiteWinner);
+				}
+				else if (i + 1 == heightsArray.length && i+1 % 2 == 1 ) {
+					console.log('hello last');
 
-			// document.getElementById('activities').style.height = theFreakingHeight + 'px';
+					finalArray.push(heightsArray[i + 1]);
+				}
+			}
+
+			console.log('heightsArray: '+ heightsArray);
+			console.log('finalArray: '+ finalArray);
+
+			var theFreakingHeight = 500;
+			for (var i = 0; i < finalArray.length; i++) {
+				theFreakingHeight = theFreakingHeight + finalArray[i];
+			}
+
+			console.log('tfh = ' + theFreakingHeight);
+
+			document.getElementById('activities').style.height = theFreakingHeight + 'px';
 
 		</script>
 

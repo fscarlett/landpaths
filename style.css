@@ -74,6 +74,7 @@ h1, .h1 {
 	color: #222;
 	font-size: 3.1rem !important;
 	text-transform: none;
+	margin-bottom: 15px;	
 }
 
 
@@ -359,7 +360,7 @@ body.page-template-page-t4 .entry-header {
 	  align-content: space-between;
 	  /* Your container needs a fixed height, and it 
 	   * needs to be taller than your tallest column. */
-	  height: 1500px;
+	  /*height: 1500px;*/
 	}
 
 	/* Re-order items into rows */
@@ -380,7 +381,7 @@ body.page-template-page-t4 .entry-header {
 
 @media(min-width: 992px){
 	.activity-wrapper {
-		height: 2000px;
+		/*height: 2000px;*/ 
 	}
 }
 

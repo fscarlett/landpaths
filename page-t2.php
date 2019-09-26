@@ -20,7 +20,7 @@ get_header(); ?>
 
 				endif;
 
-					$lp_quote = get_field('quote_text');
+					$lp_quote = get_field('single_quote_text');
 
 
 		 ?>
@@ -48,8 +48,8 @@ get_header(); ?>
 
 					if($lp_quote) {  ?>
 
-						<p class="h4"><?php the_field('quote_author'); ?></p>
-						<p class="quotetext">" <?php the_field('quote_text'); ?> "</p>
+						<p class="h4"><?php the_field('single_quote_author'); ?></p>
+						<p class="quotetext">" <?php the_field('single_quote_text'); ?> "</p>
 
 					<?php } else { ?>
 
@@ -114,7 +114,7 @@ get_header(); ?>
 
 					<div class="thingy"></div>
 
-					<div class="activity-wrapper ast-row">
+					<div class="activity-wrapper ast-row" id="activities"> 
 
 						<?php while( have_rows('activity') ): the_row(); 
 
@@ -123,10 +123,11 @@ get_header(); ?>
 							$description = get_sub_field('description');
 							$button_text = get_sub_field('button_text');
 							$button_link = get_sub_field('button_link');
+							$new_tab = get_sub_field('t2_new_tab');
 
 						?>
 
-							<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
+							<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12 lp-activity-card">
 
 									<img src="<?php echo $image; ?>" alt="<?php echo $image['alt'] ?>" />
 
@@ -134,7 +135,8 @@ get_header(); ?>
 
 							    <p><?php echo $description; ?></p>
 
-							    <a href="<?php echo $button_link; ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php echo $button_text; ?></button></a>
+							    <a href="<?php echo $button_link; ?>" <?php if( $new_tab ): ?> target="_blank"  rel="nofollow"<?php endif; ?>class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php echo $button_text; ?></button></a>
+
 
 							</div>
 
@@ -144,8 +146,99 @@ get_header(); ?>
 				</section>
 
 			<?php endif; ?>
+
+		<script>
+			// Gets heights of Activity cards, finds tallest in each row, adds rows for height of masonry wrapper.
+			var cardArray = document.getElementsByClassName('lp-activity-card');
+			var heightsArray = [];
+			var finalArray = [];
+			var hite;
+			var hiteWinner;
+
+			console.log(cardArray);
+
+
+			Array.prototype.forEach.call(cardArray, e => {
+				hite = e.offsetHeight;
+				heightsArray.push(hite);
+			});
+
+			for (var i = 0; i < heightsArray.length; i++) {
+
+				if ( i % 2 == 1 ) {
+					console.log('hello2');
+					hiteWinner =	heightsArray[i-1] > heightsArray[i] ? heightsArray[i-1] :  heightsArray[i];
+					finalArray.push(hiteWinner);
+				}
+				else if (i + 1 == heightsArray.length && i+1 % 2 == 1 ) {
+					console.log('hello last');
+
+					finalArray.push(heightsArray[i + 1]);
+				}
+			}
+
+			console.log('heightsArray: '+ heightsArray);
+			console.log('finalArray: '+ finalArray);
+
+			var theFreakingHeight = 500;
+			for (var i = 0; i < finalArray.length; i++) {
+				theFreakingHeight = theFreakingHeight + finalArray[i];
+			}
+
+			console.log('tfh = ' + theFreakingHeight);
+
+			document.getElementById('activities').style.height = theFreakingHeight + 'px';
+
+		</script>
 		
 		<!-- ============= End activity section ============== -->
+
+
+		<!-- ============= DOWNLOADS section ================== -->
+
+				<?php if ( have_rows('downloads') ): ?>
+
+					<section class="lp-downloads-section lp-section ast-container">
+						<div class="ast-row">
+							<div class="ast-col-lg-8 ast-col-md-8 ast-col-sm-10 ast-col-xs-12">
+
+								<p class="h4">Links and Downloads</p>
+
+								<h2 class="h1"><?php the_field('downloads_heading'); ?></h2>
+								<p><?php the_field('downloads_subheading'); ?></p>
+
+								<div class="downloads-wrapper">
+									<?php while( have_rows('downloads') ): the_row();
+
+										$file = get_sub_field('file');							
+										$label = get_sub_field('label');							
+																
+									?>
+										<p><?php the_sub_field('description'); ?></p>
+
+										<p class="lp-download"><a href="<?php echo $file; ?>" target="_blank" rel="nofollow"><?php echo $label; ?></a></p>
+										<p></p>
+
+									<?php endwhile; ?>
+
+								</div>
+							</div>
+						</div>
+						<div class=" lp-phone-hide lp-illustration lp-illo-small">
+								<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/LP_illo_poppy.jpg" alt="">
+						</div>
+					</section>
+
+				<?php endif; ?>
+
+
+
+		<!-- ============= End downloads section ============== -->
+
+
+
+
+
 
 
 		<?php 

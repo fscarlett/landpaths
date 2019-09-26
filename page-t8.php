@@ -75,7 +75,6 @@ get_header(); ?>
 		<section class="lp-section ast-container">
 			<h2>Partner Agencies and Organizations</h2>
 
-			<h3>Need logos to go here.... </h3>
 
 			<?php if( have_rows('partner_orgs') ): ?>
 
