@@ -18,7 +18,7 @@ get_header(); ?>
 			
 						<?php // astra_primary_content_top(); ?>
 
-						<?php // astra_content_page_loop(); ?>
+						<?php  astra_content_page_loop(); ?>
 
 						<?php // astra_primary_content_bottom(); ?>
 
@@ -31,7 +31,7 @@ get_header(); ?>
 
 		<section class="lp-section ast-container">
 
-		<h1>Board of Directors</h1>
+		<!-- <h1>Board of Directors</h1> -->
 
 
 			<?php if( have_rows('board_member') ): ?>
