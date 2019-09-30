@@ -120,6 +120,7 @@ get_header(); ?>
 
 							$image = get_sub_field('image');
 							$title = get_sub_field('title');
+							$datetime = get_sub_field('date_time');
 							$description = get_sub_field('description');
 							$button_text = get_sub_field('button_text');
 							$button_link = get_sub_field('button_link');
@@ -133,6 +134,7 @@ get_header(); ?>
 
 							    <h3 class="h4"><?php echo $title; ?></h3>
 
+							    <div class="card-datetime"><?php echo $datetime; ?></div>
 							    <p><?php echo $description; ?></p>
 
 							    <a href="<?php echo $button_link; ?>" <?php if( $new_tab ): ?> target="_blank"  rel="nofollow"<?php endif; ?>class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php echo $button_text; ?></button></a>

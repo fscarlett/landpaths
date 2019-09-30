@@ -133,6 +133,9 @@ get_header(); ?>
 					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_1_image'); ?>)">
 					</div>
 					<h3 class="h4"><?php the_field('outing_1_title'); ?></h3>
+					<div class="card-datetime">
+						<?php the_field('column_1_datetime'); ?>
+					</div>
 					<p><?php the_field('outing_1_copy'); ?></p>
 
 					<a href="<?php the_field('outing_1_link'); ?>" class="lp-link ast-custom-button-link" target="_blank" rel="nofollow"><?php the_field('outing_1_link_text'); ?></a>
@@ -144,6 +147,9 @@ get_header(); ?>
 					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_2_image'); ?>)">
 					</div>
 					<h3 class="h4"><?php the_field('outing_2_title'); ?></h3>
+					<div class="card-datetime">
+						<?php the_field('column_2_datetime'); ?>
+					</div>
 					<p><?php the_field('outing_2_copy'); ?></p>
 					<a href="<?php the_field('outing_2_link'); ?>" class="lp-link ast-custom-button-link" target="_blank" rel="nofollow"><?php the_field('outing_2_link_text'); ?></a>
 				</div>
@@ -152,6 +158,9 @@ get_header(); ?>
 					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_3_image'); ?>)">
 					</div>
 					<h3 class="h4"><?php the_field('outing_3_title'); ?></h3>
+					<div class="card-datetime">
+						<?php the_field('column_3_datetime'); ?>
+					</div>
 					<p><?php the_field('outing_3_copy'); ?></p>
 					<a href="<?php the_field('outing_3_link'); ?>" class="lp-link ast-custom-button-link" target="_blank" rel="nofollow"><?php the_field('outing_3_link_text'); ?></a>
 				</div>
@@ -160,6 +169,9 @@ get_header(); ?>
 					<div class="lp-4up-img-wrapper" style="background-image: url(<?php the_field('outing_4_image'); ?>)">
 					</div>
 					<h3 class="h4"><?php the_field('outing_4_title'); ?></h3>
+					<div class="card-datetime">
+						<?php the_field('column_4_datetime'); ?>
+					</div>
 					<p><?php the_field('outing_4_copy'); ?></p>
 					<a href="<?php the_field('outing_4_link'); ?>" class="lp-link ast-custom-button-link" target="_blank" rel="nofollow"><?php the_field('outing_4_link_text'); ?></a>
 				</div>

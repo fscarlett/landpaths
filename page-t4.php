@@ -39,7 +39,7 @@ get_header(); ?>
 					<?php // astra_primary_content_bottom(); ?>
 
 				</div>
-				<div class="ast-col-lg-3 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
+				<div class="lp-quote-column ast-col-lg-3 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
 					
 					<?php 
 
@@ -74,6 +74,7 @@ get_header(); ?>
 
 					$image = get_sub_field('image');
 					$title = get_sub_field('title');
+					$datetime = get_sub_field('date_time');
 					$description = get_sub_field('description');
 					$button_text = get_sub_field('button_text');
 					$button_link = get_sub_field('button_link');
@@ -90,6 +91,7 @@ get_header(); ?>
 
 					    <h3 class="h4"><?php echo $title; ?></h3>
 
+					    <div class="card-datetime"><?php echo $datetime; ?></div>
 					    <p><?php echo $description; ?></p>
 
 					    <a href="<?php echo $button_link; ?>" <?php if( $new_tab ): ?> target="_blank"  rel="nofollow"<?php endif; ?>class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php echo $button_text; ?></button></a>
@@ -198,9 +200,9 @@ get_header(); ?>
 		<?php if( have_rows('t4_partners') ): ?>
 
 			<section class="lp-blog-partners ast-container">
-				<h2 class="h4 sans-heading">Partners</h2>
+				<h2 class="h4 sans-heading"><?php the_field('partners_section_subtitle') ?></h2>
 					<h3 class="h1 sans-heading"><?php the_field('partners_section_title'); ?></h3>
-					<!-- <p><?php the_field('partners_section_copy'); ?></p> -->
+					<div><?php the_field('partners_section_paragraph'); ?></div>
 
 					<div class="lp-t4-partners-wrapper">
 
