@@ -130,7 +130,10 @@ get_header(); ?>
 
 							<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12 lp-activity-card">
 
-									<img src="<?php echo $image; ?>" alt="<?php echo $image['alt'] ?>" />
+									<div class="lp-activity-img-wrapper" style="background-image: url(<?php echo $image; ?>)"></div>
+								
+
+									<!-- <img src="<?php echo $image; ?>" alt="<?php echo $image['alt'] ?>" /> -->
 
 							    <h3 class="h4"><?php echo $title; ?></h3>
 
@@ -148,59 +151,6 @@ get_header(); ?>
 				</section>
 
 			<?php endif; ?>
-
-		<script>
-
-			if (window.innerWidth > 767) {
-
-				// Gets heights of Activity cards, finds tallest in each row, adds rows for height of masonry wrapper.
-				var cardArray = document.getElementsByClassName('lp-activity-card');
-				var heightsArray = [];
-				var finalArray = [];
-				var hite;
-				var hiteWinner;
-
-				console.log(cardArray);
-
-
-				Array.prototype.forEach.call(cardArray, e => {
-					hite = e.offsetHeight;
-					heightsArray.push(hite);
-				});
-
-				for (var i = 0; i < heightsArray.length; i++) {
-
-					if ( i % 2 == 1 ) {
-						console.log('hello2');
-						hiteWinner =	heightsArray[i-1] > heightsArray[i] ? heightsArray[i-1] :  heightsArray[i];
-						finalArray.push(hiteWinner);
-					}
-					else if ( heightsArray.length == 1 ) {
-						console.log('hello first and only');
-						finalArray.push(heightsArray[0]);
-					}
-					else if (i + 1 == heightsArray.length  ) {
-						console.log('hello last odd');
-						finalArray.push(heightsArray[i]);
-					}
-				}
-
-				console.log('heightsArray: '+ heightsArray);
-				console.log('heightsArray length: '+ heightsArray.length);
-				console.log('finalArray: '+ finalArray);
-
-				var theFreakingHeight = 300;
-				for (var i = 0; i < finalArray.length; i++) {
-					theFreakingHeight = theFreakingHeight + finalArray[i];
-				}
-
-				console.log('tfh = ' + theFreakingHeight);
-
-				document.getElementById('activities').style.height = theFreakingHeight + 'px';
-
-			}
-
-		</script>
 		
 		<!-- ============= End activity section ============== -->
 

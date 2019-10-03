@@ -120,7 +120,16 @@ get_header(); ?>
 				</div>
 			</div> <!-- ast-row -->
 
-					<?php the_post_navigation(); ?>
+					<?php 
+
+						$lp_nav_args = array(
+							'prev_text'          => '<<  %title',
+			        'next_text'          => '%title  >>'
+						) 
+
+					?>
+
+					<?php the_post_navigation( $lp_nav_args ); ?>
 
 					<?php  // astra_primary_content_bottom(); ?>
 		</section>

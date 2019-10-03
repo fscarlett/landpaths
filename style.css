@@ -509,67 +509,26 @@ section.lp_block7_content_quote {
 	color: #666;
 }
 
-
-
-
-
-/* ----------  masonry for T4 Activities ssection ---------------- */
-
-
 @media(min-width: 768px){
-
 	.lp-activity-card {
-		/*min-height: 500px;*/
 		margin-bottom: 20px;
 		width: 50%;
-		/*float: none;*/
+		height: 700px;
 	}
-
-	/* Render items as columns */
-	.activity-wrapper {
-	  display: flex;
-	  flex-flow: column wrap;
-	  align-content: space-between;
-	  /* Your container needs a fixed height, and it 
-	   * needs to be taller than your tallest column. */
-	  height: 1500px;
-	}
-
-	/* Re-order items into rows */
-	.lp-activity-card:nth-child(2n+1) { order: 1; }
-	.lp-activity-card:nth-child(2n+2) { order: 2; }
-	/*.lp-activity-card:nth-child(3n)   { order: 3; }*/
-
-	/* Force new columns */
-	.activity-wrapper::before,
-	.activity-wrapper::after {
-	  content: "";
-	  flex-basis: 100%;
-	  width: 0;
-	  order: 2;
-	}
-
 }
 
-@media(min-width: 992px){
-	.activity-wrapper {
-		height: 2000px; 
+@media(min-width: 1100px){
+	.lp-activity-card {
+		height: 800px;
 	}
 }
 
 @media(max-width: 767px){
-
 	.lp-activity-card {
 		margin-bottom: 20px;
 		width: 96%;
 	}
 }
-
-/* -------------------------------------------------------------- */
-
-
-
-
 
 
 .lp-activity-img-wrapper {
@@ -583,14 +542,21 @@ section.lp_block7_content_quote {
 @media(min-width: 768px) {
 	.lp-activity-img-wrapper {
 		width: 100%;
-		height: 35vw;
+		height: 29vw;
+	}
+}
+
+@media(min-width: 1300px) {
+	.lp-activity-img-wrapper {
+		width: 100%;
+		height: 430px	;
 	}
 }
 
 section.lp-downloads-section {
 	padding-bottom: 0;
-	padding-top: 5px;
-	min-height: 400px;
+	padding-top: 3.5rem;
+	min-height: 440px;
 }
 
 .downloads-wrapper {
