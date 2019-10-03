@@ -21,6 +21,35 @@ light green #A6AB69
 
 /* ----------  Astra overrides -------------  */
 
+
+.archive h2 {
+	color: #CF6D34;
+	font-size: 1.3rem;
+	font-weight: bold;
+	/*margin-bottom: 15px;*/
+	margin: 0;
+	text-transform: none;
+	font-family: Roboto;
+}
+
+.archive h2 a {
+	color: #CF6D34;
+	font-weight: bold;
+}
+
+.ast-page-builder-template .ast-archive-description {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+span.comments-link {
+	display: none;
+}
+
+button.ast-menu-toggle {
+	border: none;
+}
+
 .ast-small-footer-wrap {
     text-align: left;
     font-weight: bold;
@@ -69,6 +98,9 @@ light green #A6AB69
 	.footer-adv-widget-3 {
 		display: none;
 	}
+	#menu-footer-menu {
+		margin-left: -8px;
+	}
 }
 
 
@@ -85,17 +117,46 @@ light green #A6AB69
 	padding-left: 0;
 }
 
-
+@media(max-width: 1024px){
+	#ast-scroll-top {
+		/*right: 100px;*/
+	}
+}
 
 /* -----------  Landpaths ------------------ */
 
-h1, .h1 {
-	color: #222;
-	font-size: 3.1rem !important;
-	text-transform: none;
-	margin-bottom: 15px;	
-	font-family: 'Roboto Slab';
-	font-weight: 400;
+@media(min-width: 769px) {
+
+	h1, .h1 {
+		color: #222;
+		font-size: 3.1rem !important;
+		text-transform: none;
+		margin-bottom: 15px;	
+		font-family: 'Roboto Slab';
+		font-weight: 400;
+	}
+}
+
+@media(max-width: 768px) {
+	h1, .h1 {
+		font-size: 2.5rem !important;
+		color: #222;
+		text-transform: none;
+		margin-bottom: 15px;	
+		font-family: 'Roboto Slab';
+		font-weight: 400;
+	}
+}
+
+@media(max-width: 360px) {
+	h1, .h1 {
+		font-size: 1.8rem !important;
+		color: #222;
+		text-transform: none;
+		margin-bottom: 15px;	
+		font-family: 'Roboto Slab';
+		font-weight: 400;
+	}
 }
 
 
@@ -139,6 +200,11 @@ hr {
 	color: #fff;
 	line-height: 1.3;
 	font-weight: bold;
+}
+@media(max-width: 768px){
+	.footer-slogan {
+		font-size: 2rem;
+	}
 }
 
 .lp-footer-nap {
@@ -205,8 +271,13 @@ section.lp-quote-section {
 	background-color: #f3f6f9;
 }
 
-.lp-border-right {
-	border-right: 5px solid #ccc !important;
+@media(min-width: 768px){
+	.lp-border-right {
+		border-right: 5px solid #ccc !important;
+	}
+	.lp-border-left {
+		border-left: 5px solid #ccc !important;
+	}
 }
 
 .thingy {
@@ -283,7 +354,7 @@ section.lp-quote-section {
 	width: 19%;
 	position: relative;
 	right: -60px;	
-  bottom: -20px;
+  bottom: -157px;
 }
 
 .lp-button {
@@ -293,6 +364,11 @@ section.lp-quote-section {
 
 .lp-link {
 	color: #4D7536;
+}
+
+.lp_block5_cta_4up .lp-link {
+	display: inline-block;
+	margin-bottom: 25px;
 }
 
 .lp-quad-wrapper {
@@ -332,9 +408,26 @@ section.lp-quote-section {
 	height: 250px;
 }
 
-@media(max-width: 405px) {
-	.lp-quad {
+@media (max-width: 801px) {
+	.lp-quad-wrapper .lp-quad {
+		margin: 2px;
+	}
+}
+
+@media (max-width: 767px) {
+	.lp-quad-wrapper {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.lp-quad-wrapper .lp-quad {
+		height: 250px;
+	}
+}
+
+@media(max-width: 500px) {
+	.lp-quad-wrapper .lp-quad {
 		width: 100%;
+		height: 360px;
 	}
 }
 
@@ -347,6 +440,8 @@ body.page-template-page-t2 .entry-header {
 
 .lp-quote-section .quote-wrapper {
 	margin-top: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .lp-quote-section .lp-quote-card {
@@ -380,12 +475,36 @@ body.page-template-page-t4 .entry-header {
 	max-height: 400px;
 }
 
+@media(max-width: 767px){
+	.lp-illo-column {
+		display: none;
+	}
+}
+
+body.page-template-page-t4 .activity-section,
+body.page-template-page-t2 .activity-section {
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+
+body.page-template-page-t4 .lp-blog-partners,
+body.page-template-page-t2 .lp-blog-partners {
+	margin-top: 10px;
+}
+
+section.lp_block7_content_quote {
+	padding-bottom: 15px;
+}
+
+
+
+
 .activity-wrapper .h4 {
 	margin-top: 30px;
 }
 
 .card-datetime {
-	font-size: 0.9rem;
+	font-size: 0.95rem;
 	font-weight: bold;
 	color: #666;
 }
@@ -470,6 +589,8 @@ body.page-template-page-t4 .entry-header {
 
 section.lp-downloads-section {
 	padding-bottom: 0;
+	padding-top: 5px;
+	min-height: 400px;
 }
 
 .downloads-wrapper {
@@ -680,7 +801,8 @@ body.single-post h1 {
 	display: none;
 }
 
-#nf-field-4-wrap.submit-wrap input {
+#nf-field-4-wrap.submit-wrap input,
+#nf-field-10-wrap.submit-wrap input {
 	background: #4D7536;
 	color: #fff;
 	padding: 15px 40px;
@@ -689,8 +811,20 @@ body.single-post h1 {
 	font-weight: 700;
 }
 
+.nf-form-content {
+margin: 25px 0 !important;
+}
+
 /* ----------------------------  T7 Staff ------------------ */
 
+section.staff-section {
+	padding-top: 10px;
+	padding-bottom: 60px;
+}
+
+section.staff-section .thingy {
+	height: 60px;
+}
 
 .executive-staff-section h3 {
 	margin-bottom: 0;
@@ -759,6 +893,13 @@ body.single-post h1 {
 	justify-content: center;
 	align-items: center;
 }
+
+@media(min-width: 993px) and (max-width: 1200px) {
+	.logo-wrapper {
+		width: 20%;
+	}
+}
+
 .logo-wrapper img {
 	max-width: 100%;
 	max-height: 170px;
@@ -814,7 +955,15 @@ body.single-post h1 {
 	width: 175px;
 	position: absolute;
 	right: 10px;	
-  bottom: 0px;
+  bottom: 110px;
+  z-index: 500;
+}
+
+.illo-signup {
+	width: 175px;
+	position: absolute;
+	right: 10px;	
+  bottom: 220px;
   z-index: 500;
 }
 
@@ -830,6 +979,61 @@ body.single-post h1 {
 	border: none;
 }
 
+/* ------------------------ Archive ----------------------- */
+
+body.archive .content-area {
+	background-color: #e6e6f2;
+}
+
+body.archive article.ast-article-post .entry-header,
+body.archive article.ast-article-post .entry-content {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0;
+	background-color: #fff;
+}
+
+body.archive .content-area article {
+	padding: 15px;
+}
+
+body.archive .content-area article .post-content {
+	background-color: #fff;		
+}
+
+body.archive .content-area h1.ast-archive-title {
+	color: #222;
+}
+
+body.archive .content-area h2 a {
+	font-family: Roboto, sans-serif;
+}
+
+.entry-meta, .entry-meta * {
+	color: #222;
+	margin-bottom: 5px;
+}
+
+.read-more {
+	margin-top: 25px;
+}
+
+.read-more a {
+	font-weight: bold;
+	padding: 15px 25px;
+}
+
+
+@media(min-width: 769px){
+	body.archive .content-area article {
+		height: 630px;
+	}
+
+	body.archive .content-area article .post-thumb {
+		height: 250px;
+		overflow: hidden;
+	}
+}
 
 
 /* -------------------------------------------------------  */

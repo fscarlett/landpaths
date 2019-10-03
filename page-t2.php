@@ -150,50 +150,55 @@ get_header(); ?>
 			<?php endif; ?>
 
 		<script>
-			// Gets heights of Activity cards, finds tallest in each row, adds rows for height of masonry wrapper.
-			var cardArray = document.getElementsByClassName('lp-activity-card');
-			var heightsArray = [];
-			var finalArray = [];
-			var hite;
-			var hiteWinner;
 
-			console.log(cardArray);
+			if (window.innerWidth > 767) {
+
+				// Gets heights of Activity cards, finds tallest in each row, adds rows for height of masonry wrapper.
+				var cardArray = document.getElementsByClassName('lp-activity-card');
+				var heightsArray = [];
+				var finalArray = [];
+				var hite;
+				var hiteWinner;
+
+				console.log(cardArray);
 
 
-			Array.prototype.forEach.call(cardArray, e => {
-				hite = e.offsetHeight;
-				heightsArray.push(hite);
-			});
+				Array.prototype.forEach.call(cardArray, e => {
+					hite = e.offsetHeight;
+					heightsArray.push(hite);
+				});
 
-			for (var i = 0; i < heightsArray.length; i++) {
+				for (var i = 0; i < heightsArray.length; i++) {
 
-				if ( i % 2 == 1 ) {
-					console.log('hello2');
-					hiteWinner =	heightsArray[i-1] > heightsArray[i] ? heightsArray[i-1] :  heightsArray[i];
-					finalArray.push(hiteWinner);
+					if ( i % 2 == 1 ) {
+						console.log('hello2');
+						hiteWinner =	heightsArray[i-1] > heightsArray[i] ? heightsArray[i-1] :  heightsArray[i];
+						finalArray.push(hiteWinner);
+					}
+					else if ( heightsArray.length == 1 ) {
+						console.log('hello first and only');
+						finalArray.push(heightsArray[0]);
+					}
+					else if (i + 1 == heightsArray.length  ) {
+						console.log('hello last odd');
+						finalArray.push(heightsArray[i]);
+					}
 				}
-				else if ( heightsArray.length == 1 ) {
-					console.log('hello first and only');
-					finalArray.push(heightsArray[0]);
+
+				console.log('heightsArray: '+ heightsArray);
+				console.log('heightsArray length: '+ heightsArray.length);
+				console.log('finalArray: '+ finalArray);
+
+				var theFreakingHeight = 300;
+				for (var i = 0; i < finalArray.length; i++) {
+					theFreakingHeight = theFreakingHeight + finalArray[i];
 				}
-				else if (i + 1 == heightsArray.length  ) {
-					console.log('hello last odd');
-					finalArray.push(heightsArray[i]);
-				}
+
+				console.log('tfh = ' + theFreakingHeight);
+
+				document.getElementById('activities').style.height = theFreakingHeight + 'px';
+
 			}
-
-			console.log('heightsArray: '+ heightsArray);
-			console.log('heightsArray length: '+ heightsArray.length);
-			console.log('finalArray: '+ finalArray);
-
-			var theFreakingHeight = 300;
-			for (var i = 0; i < finalArray.length; i++) {
-				theFreakingHeight = theFreakingHeight + finalArray[i];
-			}
-
-			console.log('tfh = ' + theFreakingHeight);
-
-			document.getElementById('activities').style.height = theFreakingHeight + 'px';
 
 		</script>
 		

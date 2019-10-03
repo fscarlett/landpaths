@@ -30,7 +30,7 @@
 	</div>
 
 
-	<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/09/LP_illo_acorns_flip.jpg" class="illo-donate lp-phone-hide" alt="">
+	<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/09/LP_illo_acorns_flip.jpg" class="illo-signup lp-phone-hide" alt="">
 
 
 </section>

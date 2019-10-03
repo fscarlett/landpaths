@@ -30,7 +30,7 @@ get_header(); ?>
 			<p class="h4"><?php the_field('subtitle'); ?></p>
 
 			<div class="ast-row">
-				<div class="ast-col-lg-9 ast-col-md-8 ast-col-sm-12 ast-col-xs-12 <?php if($lp_quote): ?> lp-border-right <?php endif; ?>">
+				<div class="ast-col-lg-9 ast-col-md-8 ast-col-sm-12 ast-col-xs-12 <?php if($lp_quote): ?>  <?php endif; ?>">
 			
 					<?php // astra_primary_content_top(); ?>
 
@@ -39,7 +39,6 @@ get_header(); ?>
 					<?php // astra_primary_content_bottom(); ?>
 
 				</div>
-				<div class="lp-quote-column ast-col-lg-3 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
 					
 					<?php 
 
@@ -47,12 +46,16 @@ get_header(); ?>
 
 					if($lp_quote) {  ?>
 
+					<div class="lp-quote-column ast-col-lg-3 ast-col-md-4 ast-col-sm-12 ast-col-xs-12 lp-border-left">
+
 						<p class="h4"><?php the_field('quote_author'); ?></p>
 						<p class="quotetext">" <?php the_field('quote_text'); ?> "</p>
 
 					<?php } else { ?>
 
-					<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/LP_illo_heron.jpg" class="illo-quote lp-phone-hide" alt="">
+					<div class="lp-quote-column lp-illo-column ast-col-lg-3 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
+
+						<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/LP_illo_heron.jpg" class="illo-quote lp-phone-hide" alt="">
 
 						<?php
 					}
@@ -62,10 +65,13 @@ get_header(); ?>
 			</div>
 		</section>
 
+
+	<!-- Activity Section -->
+	<?php if( have_rows('activity') ): ?>
+
 		<section class="activity-section lp-section ast-container">
 			<h2><?php the_field('activity_heading'); ?></h2>
 
-			<?php if( have_rows('activity') ): ?>
 			<div class="thingy"></div>
 
 			<div class="activity-wrapper ast-row" id="activities">
@@ -102,54 +108,58 @@ get_header(); ?>
 
 				</div>
 
-			<?php endif; ?>
 		</section>
+	<?php endif; ?>
 
 		<script>
 			// Gets heights of Activity cards, finds tallest in each row, adds rows for height of masonry wrapper.
-			var cardArray = document.getElementsByClassName('lp-activity-card');
-			var heightsArray = [];
-			var finalArray = [];
-			var hite;
-			var hiteWinner;
+			if (window.innerWidth > 767) {
 
-			console.log(cardArray);
+				var cardArray = document.getElementsByClassName('lp-activity-card');
+				var heightsArray = [];
+				var finalArray = [];
+				var hite;
+				var hiteWinner;
+
+				console.log(cardArray);
 
 
-			Array.prototype.forEach.call(cardArray, e => {
-				hite = e.offsetHeight;
-				heightsArray.push(hite);
-			});
+				Array.prototype.forEach.call(cardArray, e => {
+					hite = e.offsetHeight;
+					heightsArray.push(hite);
+				});
 
-			for (var i = 0; i < heightsArray.length; i++) {
+				for (var i = 0; i < heightsArray.length; i++) {
 
-				if ( i % 2 == 1 ) {
-					console.log('hello2');
-					hiteWinner =	heightsArray[i-1] > heightsArray[i] ? heightsArray[i-1] :  heightsArray[i];
-					finalArray.push(hiteWinner);
+					if ( i % 2 == 1 ) {
+						console.log('hello2');
+						hiteWinner =	heightsArray[i-1] > heightsArray[i] ? heightsArray[i-1] :  heightsArray[i];
+						finalArray.push(hiteWinner);
+					}
+					else if ( heightsArray.length == 1 ) {
+						console.log('hello first and only');
+						finalArray.push(heightsArray[0]);
+					}
+					else if (i + 1 == heightsArray.length  ) {
+						console.log('hello last odd');
+						finalArray.push(heightsArray[i]);
+					}
 				}
-				else if ( heightsArray.length == 1 ) {
-					console.log('hello first and only');
-					finalArray.push(heightsArray[0]);
+
+				console.log('heightsArray: '+ heightsArray);
+				console.log('heightsArray length: '+ heightsArray.length);
+				console.log('finalArray: '+ finalArray);
+
+				var theFreakingHeight = 300;
+				for (var i = 0; i < finalArray.length; i++) {
+					theFreakingHeight = theFreakingHeight + finalArray[i];
 				}
-				else if (i + 1 == heightsArray.length  ) {
-					console.log('hello last odd');
-					finalArray.push(heightsArray[i]);
-				}
+
+				console.log('tfh = ' + theFreakingHeight);
+
+				document.getElementById('activities').style.height = theFreakingHeight + 'px';
+
 			}
-
-			console.log('heightsArray: '+ heightsArray);
-			console.log('heightsArray length: '+ heightsArray.length);
-			console.log('finalArray: '+ finalArray);
-
-			var theFreakingHeight = 300;
-			for (var i = 0; i < finalArray.length; i++) {
-				theFreakingHeight = theFreakingHeight + finalArray[i];
-			}
-
-			console.log('tfh = ' + theFreakingHeight);
-
-			document.getElementById('activities').style.height = theFreakingHeight + 'px';
 
 		</script>
 

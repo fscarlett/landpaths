@@ -53,7 +53,7 @@ get_header(); ?>
 
 						?>
 
-							<div class="ast-col-lg-2 ast-col-md-2 ast-col-sm-3 ast-col-xs-4 logo-wrapper">
+							<div class="ast-col-lg-2 ast-col-md-3 ast-col-sm-4 ast-col-xs-6 logo-wrapper">
 
 							    <img src="<?php the_sub_field('logo'); ?>" alt="">
 
@@ -88,7 +88,7 @@ get_header(); ?>
 
 						?>
 
-							<div class="ast-col-lg-2 ast-col-md-2 ast-col-sm-3 ast-col-xs-4 logo-wrapper">
+							<div class="ast-col-lg-2 ast-col-md-3 ast-col-sm-4 ast-col-xs-6 logo-wrapper">
 
 							    <img src="<?php the_sub_field('logo'); ?>" alt="">
 
@@ -109,7 +109,7 @@ get_header(); ?>
 		<section class="ast-container lp-section">
 			<p><?php the_field('partners_bottom_copy'); ?></p>
 
-			<?php echo do_shortcode('[ninja_form id=1]'); ?>
+			<?php echo do_shortcode('[ninja_form id=2]'); ?>
 		</section>
 
 
