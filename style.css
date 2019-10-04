@@ -357,6 +357,17 @@ section.lp-quote-section {
   bottom: -157px;
 }
 
+.lp-illo-downloads {
+	top: 100px;
+}
+
+.lp-illo-downloads img {
+	width: 19%;
+	position: relative;
+	right: -60px;	
+  top: 0;
+}
+
 .lp-button {
 	font-weight: bold;
 	margin-bottom: 30px;
@@ -489,7 +500,8 @@ body.page-template-page-t2 .activity-section {
 
 body.page-template-page-t4 .lp-blog-partners,
 body.page-template-page-t2 .lp-blog-partners {
-	margin-top: 10px;
+	margin-top: 30px;
+	padding-bottom: 50px;
 }
 
 section.lp_block7_content_quote {

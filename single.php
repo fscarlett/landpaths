@@ -123,8 +123,8 @@ get_header(); ?>
 					<?php 
 
 						$lp_nav_args = array(
-							'prev_text'          => '<<  %title',
-			        'next_text'          => '%title  >>'
+							'prev_text'          => '<  %title',
+			        'next_text'          => '%title  >'
 						) 
 
 					?>

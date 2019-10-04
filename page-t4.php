@@ -111,7 +111,7 @@ get_header(); ?>
 		</section>
 	<?php endif; ?>
 
-	
+
 
 	<!-- Downloads section -->
 
@@ -143,9 +143,14 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-				<div class=" lp-phone-hide lp-illustration lp-illo-small">
-						<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/LP_illo_poppy.jpg" alt="">
-				</div>
+
+				<?php if( !have_rows('t4_partners') ): ?>
+
+					<div class=" lp-phone-hide lp-illustration lp-illo-downloads">
+							<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/LP_illo_poppy.jpg" alt="">
+					</div>
+
+				<?php endif; ?>
 			</section>
 
 		<?php endif; ?>

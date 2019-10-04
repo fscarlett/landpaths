@@ -131,7 +131,7 @@ get_header(); ?>
 							<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12 lp-activity-card">
 
 									<div class="lp-activity-img-wrapper" style="background-image: url(<?php echo $image; ?>)"></div>
-								
+
 
 									<!-- <img src="<?php echo $image; ?>" alt="<?php echo $image['alt'] ?>" /> -->
 
@@ -185,7 +185,7 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-						<div class=" lp-phone-hide lp-illustration lp-illo-small">
+						<div class=" lp-phone-hide lp-illustration lp-illo-downloads">
 								<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/LP_illo_poppy.jpg" alt="">
 						</div>
 					</section>
