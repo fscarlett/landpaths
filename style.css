@@ -123,6 +123,10 @@ button.ast-menu-toggle {
 	}
 }
 
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
 /* -----------  Landpaths ------------------ */
 
 @media(min-width: 769px) {
@@ -417,6 +421,17 @@ section.lp-quote-section {
 .lp-quad-4 {
 	width: 52%;
 	height: 250px;
+}
+
+body.home .lp-blog-copy-card {
+	padding-bottom: 35px;
+	margin-bottom: 20px;
+}
+
+body.page-template-page-t4 .lp-blog-copy-card,
+body.page-template-page-t4 .lp-blog-copy-card {
+	padding-bottom: 35px;
+	margin-bottom: 20px;
 }
 
 @media (max-width: 801px) {
@@ -770,6 +785,22 @@ body.single-post h1 {
 
 .img-wrapper-250 {
 	height: 250px;
+}
+
+.img-wrapper-230 {
+	height: 230px;
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+	.img-wrapper-230 {
+		height: 180px;
+	}
+}
+
+@media (max-width: 768px) {
+	.img-wrapper-230 {
+		height: 135px;
+	}
 }
 
 

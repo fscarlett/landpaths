@@ -71,7 +71,8 @@ get_header(); ?>
 
 						    <p class="staff-title"><?php echo $title; ?></p>
 
-						    <p><?php echo $email; ?></p>
+						    <p><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
+
 						    <p><?php echo $phone; ?></p>
 
 							</div>
@@ -126,7 +127,9 @@ get_header(); ?>
 
 						    <p class="staff-title"><?php echo $title; ?></p>
 
-						    <p><?php echo $email; ?></p>
+						    <!-- <p><?php echo $email; ?></p> -->
+						    <p><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
+
 						    <p><?php echo $phone; ?></p>
 
 							</div>
@@ -181,7 +184,9 @@ get_header(); ?>
 
 						    <p class="staff-title"><?php echo $title; ?></p>
 
-						    <p><?php echo $email; ?></p>
+						    <!-- <p><?php echo $email; ?></p> -->
+						    <p><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
+
 						    <p><?php echo $phone; ?></p>
 
 							</div>
@@ -236,7 +241,9 @@ get_header(); ?>
 
 						    <p class="staff-title"><?php echo $title; ?></p>
 
-						    <p><?php echo $email; ?></p>
+						    <!-- <p><?php echo $email; ?></p> -->
+						    <p><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
+
 						    <p><?php echo $phone; ?></p>
 
 							</div>
@@ -291,7 +298,9 @@ get_header(); ?>
 
 						    <p class="staff-title"><?php echo $title; ?></p>
 
-						    <p><?php echo $email; ?></p>
+						    <!-- <p><?php echo $email; ?></p> -->
+						    <p><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
+						    
 						    <p><?php echo $phone; ?></p>
 
 							</div>
