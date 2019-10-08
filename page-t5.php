@@ -49,10 +49,13 @@ get_header(); ?>
 
 						<?php 
 
+						$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
 						$lp_blog_args = array(
 				        'order'           => 'DESC',
 				        'posts_per_page'  => '12',
-				        'category_name' => 'blog'
+				        'category_name' 	=> 'blog',
+				        'paged'						=> $paged
 				        );
 
 				      $lp_blog = new WP_Query( $lp_blog_args );
@@ -81,6 +84,10 @@ get_header(); ?>
 
 				        <?php
 				        } // endwhile 
+
+				        if (function_exists("lp_pagination")) {
+					          lp_pagination($lp_blog->max_num_pages);
+					      } 
 
 				      } else {
 				        echo '<p>No posts have been found.</p>';

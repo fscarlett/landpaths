@@ -21,7 +21,7 @@ get_header(); ?>
 
 						<h1><?php the_field('page_heading'); ?></h1>
 
-						<p><?php the_field('page_copy'); ?></p>
+						<div><?php the_field('page_copy'); ?></div>
 
 
 

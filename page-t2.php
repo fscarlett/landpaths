@@ -217,10 +217,19 @@ get_header(); ?>
 		<section class="lp-bleed-section" style="background-image: url(<?php echo $lp_big2; ?>)"></section>
 
 
-					
-		<?php get_template_part( 'template-parts/newsletter-signup' ); ?>  
+		<?php 
 
+		$partial_choice = get_field('pick_bottom_cta');
 
+		if ( $partial_choice == 'donate') { ?>
+
+				<?php get_template_part( 'template-parts/donate' ); ?>  
+
+		<?php } else { ?>
+
+				<?php get_template_part( 'template-parts/newsletter-signup' ); ?>  
+
+		<?php } ?>
 
 	</div><!-- #primary -->
 

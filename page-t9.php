@@ -55,7 +55,7 @@ get_header(); ?>
 
 							    <h4><?php echo $title; ?></h4>
 
-									<p class="board-bio"><?php echo $bio; ?></p>
+									<div class="board-bio"><?php echo $bio; ?></div>
 
 							</div>
 

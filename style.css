@@ -700,6 +700,47 @@ section.lp-downloads-section {
 	display: none;
 }
 
+/* ------- Blog Pagination ---------- */
+.lp-pagination {
+   clear:both;
+   position: absolute;
+   bottom: 20px;
+   left: calc(50% - 138px);
+   margin: 20px;
+   font-size: 16px; 
+   line-height:16px;
+   /*float:right; */
+}
+.lp-pagination span, .lp-pagination a {
+   display:block;
+   float:left;
+   margin: 2px 10px 2px 10px;
+   padding: 9px 21px 9px 22px;
+   border-radius: 2px;
+   text-decoration:none;
+   width:auto;
+   color:#fff; /* Pagination text color */
+   background: #666; /* Pagination non-active background color */
+   -webkit-transition: background .15s ease-in-out;
+   -moz-transition: background .15s ease-in-out;
+   -ms-transition: background .15s ease-in-out;
+   -o-transition: background .15s ease-in-out;
+   transition: background .15s ease-in-out;
+}
+.lp-pagination .lp-pagination-label {
+	margin-left: 0;
+}
+.lp-pagination a:hover{
+   color:#fff;
+   background: #4D7536; /* Pagination background on hover */
+}
+.lp-pagination .current{
+   padding: 9px 21px 9px 22px;
+   background: #4D7536; /* Current page background */
+   color:#fff;
+}
+/* ---------- end pagination -----------  */
+
 @media(min-width: 768px){
 
 	.lp-masonry-card {
@@ -715,7 +756,7 @@ section.lp-downloads-section {
 	  align-content: space-between;
 	  /* Your container needs a fixed height, and it 
 	   * needs to be taller than your tallest column. */
-	  height: 4000px;
+	  height: 3400px;
 	}
 
 	/* Re-order items into rows */
@@ -734,14 +775,25 @@ section.lp-downloads-section {
 
 }
 
-@media(max-width: 767px){
-.lp-blog-masonry-wrapper {
-	/*height: 6000px;*/
+@media(max-width: 1000px) and (min-width: 767px){
+	.lp-blog-masonry-wrapper {
+		height: 3000px;
+	}
 }
+
+@media(max-width: 767px){
+	.lp-blog-masonry-wrapper {
+		/*height: 6000px;*/
+	}
 	.lp-masonry-card {
 		margin-bottom: 20px;
 		width: 96%;
 	}
+	.lp-pagination {
+   position: initial;
+   margin: 0;
+	}
+
 }
 
 /* ----------------------   Blog -------------------------  */
@@ -822,6 +874,11 @@ body.single-post h1 {
 
 .nf-form-content {
 margin: 25px 0 !important;
+}
+
+.nf-response-msg {
+	font-size: 1.5rem;
+	font-weight: bold;	
 }
 
 /* ----------------------------  T7 Staff ------------------ */
@@ -930,7 +987,7 @@ section.staff-section .thingy {
 	margin-bottom: 5px;
 }
 
-.board-wrapper p.board-bio {
+.board-wrapper .board-bio {
 	margin-bottom: 40px;
 	max-width: 800px;
 }
@@ -1043,6 +1100,8 @@ body.archive .content-area h2 a {
 		overflow: hidden;
 	}
 }
+
+
 
 
 /* -------------------------------------------------------  */
