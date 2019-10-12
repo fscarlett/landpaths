@@ -68,7 +68,7 @@ get_header(); ?>
 		</section> 
 
 					
-		<?php get_template_part( 'template-parts/donate' ); ?>  
+		<?php get_template_part( 'template-parts/donate-basic' ); ?>  
 
 
 

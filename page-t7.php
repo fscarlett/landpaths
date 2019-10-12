@@ -322,7 +322,7 @@ get_header(); ?>
 		<!-- ====================  DONATE ======================================================== -->
 
 					
-		<?php get_template_part( 'template-parts/donate' ); ?>  
+		<?php get_template_part( 'template-parts/donate-basic' ); ?>  
 
 
 

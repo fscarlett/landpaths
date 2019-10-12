@@ -277,11 +277,15 @@ get_header(); ?>
 
 		$partial_choice = get_field('pick_bottom_cta');
 
-		if ( $partial_choice == 'donate') { ?>
+		if ( $partial_choice == 'donate') { 
 
-				<?php get_template_part( 'template-parts/donate' ); ?>  
+				 get_template_part( 'template-parts/donate' );  
 
-		<?php } else { ?>
+		 } elseif ($partial_choice == 'basic') {
+
+				get_template_part( 'template-parts/donate-basic' );
+
+		 } else { ?>
 
 				<?php get_template_part( 'template-parts/newsletter-signup' ); ?>  
 

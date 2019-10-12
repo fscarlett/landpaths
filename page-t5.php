@@ -121,7 +121,7 @@ get_header(); ?>
 
 
 					
-		<?php get_template_part( 'template-parts/donate' ); ?>  
+		<?php get_template_part( 'template-parts/donate-basic' ); ?>  
 
 
 

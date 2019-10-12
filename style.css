@@ -714,7 +714,7 @@ section.lp-downloads-section {
 .lp-pagination span, .lp-pagination a {
    display:block;
    float:left;
-   margin: 2px 10px 2px 10px;
+   margin: 2px 15px 10px 0;
    padding: 9px 21px 9px 22px;
    border-radius: 2px;
    text-decoration:none;
@@ -787,7 +787,7 @@ section.lp-downloads-section {
 	}
 	.lp-masonry-card {
 		margin-bottom: 20px;
-		width: 96%;
+		width: 100%;
 	}
 	.lp-pagination {
    position: initial;
@@ -996,6 +996,16 @@ section.staff-section .thingy {
 
 .lp-donate {
 	padding-bottom: 0 !important;
+}
+
+.donate-paragraph {
+	margin-bottom: 30px;
+}
+
+@media(min-width: 768px) {
+	.donate-paragraph {
+		width: 70%;
+	}
 }
 
 .white-angle {

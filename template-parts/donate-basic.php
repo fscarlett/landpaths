@@ -1,9 +1,9 @@
 <section class="lp-donate lp-section ast-container">
-	<p class="h4">Giving Back</p>
+	<p class="h4"><?php the_field('donate_subtitle', 5); ?></p>
 
-	<h2 class="h1">Donate Today</h2>
+	<h2 class="h1"><?php the_field('donate_title', 5); ?></h2>
 
-	<p>Give $5 today and your money will go toward providing knowledge to kids.</p>
+	<div class="donate-paragraph"><?php the_field('donate_paragraph', 5); ?></div>
 
 	<a href="<?php the_field('donate_link', 5); ?>" class="ast-custom-button-link" target="_blank" rel="nofollow"><button class="ast-custom-button lp-button">Donate</button></a> 
 

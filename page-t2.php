@@ -163,7 +163,7 @@ get_header(); ?>
 						<div class="ast-row">
 							<div class="ast-col-lg-8 ast-col-md-8 ast-col-sm-10 ast-col-xs-12">
 
-								<p class="h4">Links and Downloads</p>
+								<p class="h4"><?php the_field('downloads_subtitle'); ?></p>
 
 								<h2 class="h1"><?php the_field('downloads_heading'); ?></h2>
 								<p><?php the_field('downloads_subheading'); ?></p>
@@ -217,19 +217,27 @@ get_header(); ?>
 		<section class="lp-bleed-section" style="background-image: url(<?php echo $lp_big2; ?>)"></section>
 
 
+
+
 		<?php 
 
 		$partial_choice = get_field('pick_bottom_cta');
 
-		if ( $partial_choice == 'donate') { ?>
+		if ( $partial_choice == 'donate') { 
 
-				<?php get_template_part( 'template-parts/donate' ); ?>  
+				 get_template_part( 'template-parts/donate' );  
 
-		<?php } else { ?>
+		 } elseif ($partial_choice == 'basic') {
+
+				get_template_part( 'template-parts/donate-basic' );
+
+		 } else { ?>
 
 				<?php get_template_part( 'template-parts/newsletter-signup' ); ?>  
 
 		<?php } ?>
+
+		
 
 	</div><!-- #primary -->
 
