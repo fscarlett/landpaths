@@ -301,7 +301,9 @@ section.lp-quote-section {
     color: green; 
 }*/
 
-
+.join-us-3 {
+	margin-bottom: 60px;
+}
 
 .lp-img-wrapper {
 	margin-bottom: 30px;
@@ -359,6 +361,10 @@ section.lp-quote-section {
 	position: relative;
 	right: -60px;	
   bottom: -157px;
+}
+
+.join-us-3 .lp-illo-small img {
+	bottom: -130px;
 }
 
 .lp-illo-downloads {
@@ -1122,6 +1128,9 @@ body.archive .content-area h2 a {
 		}
 	.img-wrapper-250 {
 		height: 170px;
+	}
+	.lp-1000-hide {
+		display: none;
 	}
 }
 @media(max-width: 700px) {

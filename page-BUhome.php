@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home
+ * Template Name: OLD Home
  *
  * @package Astra
  * @since 1.0.0
@@ -37,92 +37,91 @@ get_header(); ?>
 
 		<section class="lp-bleed-section" style="background-image: url(<?php the_field('big_image_1'); ?>)"></section>
 
-
-<!-- NEW JOIN US SECTION w 3 INITIATIVES =============================== -->
-
-		<section class="lp-section ast-container join-us-section join-us-1">
-
-			<h2><?php the_field('initiatives_section_title'); ?></h2>
+		<section class="lp_block2_cta_2up-illustration lp-section ast-container">
+			<h2><?php the_field('block_2_heading'); ?></h2>
 			<div class="thingy"></div>
 
-			<div class="ast-row">
-				<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
-					<div class="lp-img-wrapper">
-						<img src="<?php the_field('initiatives_section_1_photo'); ?>" alt="">
-					</div>
-				</div>
-				<div class="ast-col-lg-4 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
-					<p class="h4"><?php the_field('initiatives_section_1_subtitle'); ?></p>
-					<h2 class="h1"><?php the_field('initiatives_section_1_title'); ?></h2>
+			<?php 
+				$b2_col_1 = get_field('block_2_column_1');
+				$b2_col_2 = get_field('block_2_column_2');
+			 ?>
 
-					<div><?php the_field('initiatives_section_1_paragraph'); ?></div>
-					<a href="<?php the_field('initiatives_section_1_link') ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php the_field('initiatives_section_1_button_text'); ?></button></a>
-				</div>	
+			<div class="ast-row">
+				<div class="ast-col-lg-5 ast-col-md-5 ast-col-sm-12 ast-col-xs-12">
+					<div class="lp-img-wrapper lp-home-block2-image-wrapper" style="background-image: url(<?php echo $b2_col_1['image']; ?>);">
+						<!-- <img src="<?php echo $b2_col_1['image']; ?>" alt="<?php echo $b2_col_1['image']['alt']; ?>"> -->
+					</div>
+					<h3 class="h4"><?php echo $b2_col_1['column_heading']; ?></h3>
+					<p><?php echo $b2_col_1['copy']; ?></p>
+					<a href="<?php echo $b2_col_1['button_link']; ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php echo $b2_col_1['button_text']; ?></button></a>
+
+				</div>
+				<div class="ast-col-lg-5 ast-col-md-5 ast-col-sm-12 ast-col-xs-12">
+					<div class="lp-img-wrapper lp-home-block2-image-wrapper" style="background-image: url(<?php echo $b2_col_2['image']; ?>);">
+						<!-- <img src="<?php echo $b2_col_2['image']; ?>" alt="<?php echo $b2_col_2['image']['alt']; ?>"> -->
+					</div>
+					<h3 class="h4"><?php echo $b2_col_2['column_heading']; ?></h3>
+					<p><?php echo $b2_col_2['copy']; ?></p>
+					<a href="<?php echo $b2_col_2['button_link']; ?>" class="ast-custom-button-link" ><button class="ast-custom-button lp-button"><?php echo $b2_col_2['button_text']; ?></button></a>
+
+				</div>
+				
 			</div>
-			<div class=" lp-phone-hide lp-1000-hide lp-illustration">
+
+			<div class=" lp-phone-hide lp-illustration">
 					<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/LP_illo_ceanothus.jpg" alt="">
 			</div>
 		</section>
 
+		<section class="lp-bleed-section" style="background-image: url(<?php the_field('big_image_2'); ?>)"></section>
 
-		<section class="lp-section ast-container join-us-section join-us-2">
+		<section class="lp_block3_cta_4img_r lp-section ast-container">
 			<div class="ast-row">
 				<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
-					<p class="h4"><?php the_field('initiatives_section_2_subtitle'); ?></p>
-					<h2 class="h1"><?php the_field('initiatives_section_2_title'); ?></h2>
-					<p><?php the_field('initiatives_section_2_paragraph'); ?></p>
-					<a href="<?php the_field('initiatives_section_2_link'); ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php the_field('initiatives_section_2_button_text') ?></button></a>
+					<p class="h4"><?php the_field('block_3_subheading'); ?></p>
+					<h2 class="h1"><?php the_field('block_3_heading'); ?></h2>
+					<p><?php the_field('block_3_copy'); ?></p>
+					<a href="<?php the_field('block_3_button_link'); ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php the_field('block_3_button_text') ?></button></a>
 				</div>
 
 				<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
 					<div class="ast-row lp-quad-wrapper">
-						<div class="lp-quad lp-quad-1" style="background-image: url(<?php the_field('initiatives_section_2_photo_1'); ?>);">
+						<div class="lp-quad lp-quad-1" style="background-image: url(<?php the_field('block_3_image_1'); ?>);">
 						</div>
-						<div class="lp-quad lp-quad-2" style="background-image: url(<?php the_field('initiatives_section_2_photo_2'); ?>);">
+						<div class="lp-quad lp-quad-2" style="background-image: url(<?php the_field('block_3_image_2'); ?>);">
 						</div>
-						<div class="lp-quad lp-quad-3" style="background-image: url(<?php the_field('initiatives_section_2_photo_3'); ?>);">
+					<!-- </div>
+					<div class="ast-row"> -->
+						<div class="lp-quad lp-quad-3" style="background-image: url(<?php the_field('block_3_image_3'); ?>);">
 						</div>
-						<div class="lp-quad lp-quad-4" style="background-image: url(<?php the_field('initiatives_section_2_photo_4'); ?>);">
+						<div class="lp-quad lp-quad-4" style="background-image: url(<?php the_field('block_3_image_4'); ?>);">
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-
-		<section class="lp-section ast-container join-us-section join-us-3">
+		<section class="lp_block4_cta_1up_illustration lp-section ast-container">
 			<div class="ast-row">
 				<div class="ast-col-lg-6 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
 					<div class="lp-img-wrapper">
-						<img src="<?php the_field('initiatives_section_3_photo'); ?>" alt="">
+						<img src="<?php the_field('block_4_photo'); ?>" alt="">
 					</div>
 				</div>
-				<div class="ast-col-lg-4 ast-col-md-6 ast-col-sm-12 ast-col-xs-12">
-					<p class="h4"><?php the_field('initiatives_section_3_subtitle'); ?></p>
-					<h2 class="h1"><?php the_field('initiatives_section_3_title'); ?></h2>
+				<div class="ast-col-lg-4 ast-col-md-4 ast-col-sm-12 ast-col-xs-12">
+					<p class="h4"><?php the_field('block_4_subheading'); ?></p>
+					<h2 class="h1"><?php the_field('block_4_heading'); ?></h2>
 
-					<div><?php the_field('initiatives_section_3_paragraph'); ?></div>
-					<a href="<?php the_field('initiatives_section_3_link') ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php the_field('initiatives_section_3_button_text'); ?></button></a>
+					<p><?php the_field('block_4_copy'); ?></p>
+					<a href="<?php the_field('block_4_button_link') ?>" class="ast-custom-button-link"><button class="ast-custom-button lp-button"><?php the_field('block_4_button_text'); ?></button></a>
 				</div>	
 			</div>
-			<div class=" lp-phone-hide lp-1000-hide lp-illustration lp-illo-small">
-					<img src="<?php echo site_url(); ?>/wp-content/uploads/2019/08/LP_illo_owl.jpg" alt="">
+
+			<div class=" lp-phone-hide lp-illustration lp-illo-small">
+					<img src="<?php the_field('block_4_illustration'); ?>" alt="">
 			</div>
+
 		</section>
-
-
-
-
-
- <!-- end join us ====================================================== -->
-
-
-
-
-
-
-		<section class="lp-bleed-section" style="background-image: url(<?php the_field('big_image_2'); ?>)"></section>
-
 
 		<section class="lp_block5_cta_4up lp-section ast-container">
 			<h2>Featured Outings</h2>
